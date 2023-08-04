@@ -23,7 +23,7 @@ public class Student {
 		// 인스턴스 변수(static 없는 필드)를 초기화 하는 용도
 		
 		
-		grade = 5; 
+		grade = 5;
 		ban = 10;
 		number = 99;
 		name = "임시";

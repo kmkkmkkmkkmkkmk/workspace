@@ -26,7 +26,7 @@ public class Person {
 	// [접근제한자] [예약어] 반환형 메서드명 ( [매개변수] ){ }
 	
 	// name 필드에 전달 받은 값을 세팅하는 메서드
-	// void : 메서드 수행 후 돌려 보내주는 결과가 없음(돌려 받을 게 없어 String으로 안씀)
+	// void : 메서드 수행 후 돌려 보내주는 결과가 없음
 	
 	public void setName(String name) {
 		this.name = name;
@@ -39,7 +39,7 @@ public class Person {
 	}
 	
 	// name 필드의 값을 호출한 곳으로 돌려 보내주는 메서드 작성
-	public String getName() {// 돌려 받아야해서 String
+	public String getName() {
 		
 		// return : 메서드 종료 후 호출한 곳으로 돌아가기
 		
