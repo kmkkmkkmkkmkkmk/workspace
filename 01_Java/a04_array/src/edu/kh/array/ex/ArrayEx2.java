@@ -223,26 +223,8 @@ public class ArrayEx2 {
 		// 최대값, 최소값 출력
 		System.out.println("최대값 : " + max);
 		System.out.println("최소값 : " + min);
-		
-		
-		
-	
-		
 		}
-		
-		
 	}
-	
-	
-	public void ex5() {
-		
-	}
-	
-	
-	
-	
-	
-	
 	
 	
 	

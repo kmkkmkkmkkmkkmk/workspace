@@ -8,8 +8,8 @@ public class ArrayRun2 {
 		
 //		example2.ex1();
 //		example2.ex2();
-//		example2.ex3();
-		example2.ex4();
+		example2.ex3();
+//		example2.ex4();
 //		example2.ex5();
 //		example2.ex6();
 //		example2.ex7();

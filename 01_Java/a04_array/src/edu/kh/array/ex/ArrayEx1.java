@@ -331,8 +331,6 @@ public class ArrayEx1 {
 		}
 		
 		
-		
-		
 		while(true) {
 			System.out.print("저장된 값을 확인하려는 인덱스(-1 종료) : ");
 			int index = sc.nextInt();
@@ -357,13 +355,7 @@ public class ArrayEx1 {
 			
 			// 요즘 개발 트렌드는 if문만 사용한다!
 			// 왜? 유지보수가 편해서
-			
 		} 
-			
-			
-			
-		
-		
 	}
 	
 	

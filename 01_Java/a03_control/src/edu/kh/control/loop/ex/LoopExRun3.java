@@ -8,8 +8,8 @@ public class LoopExRun3 {
 		
 //		loop3.ex1();
 //		loop3.ex2();
-//		loop3.ex3();
+		loop3.ex3();
 //		loop3.ex4();
-		loop3.ex5();
+//		loop3.ex5();
 	}
 }

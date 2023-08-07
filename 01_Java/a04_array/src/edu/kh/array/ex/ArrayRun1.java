@@ -11,9 +11,9 @@ public class ArrayRun1 {
 //		example.ex4();
 //		example.ex5();
 //		example.ex6();
-//		example.ex7();
+		example.ex7();
 //		example.ex8();
-		example.ex9();
+//		example.ex9();
 //		example.ex10();
 //		example.ex11();
 //		example.ex12();
