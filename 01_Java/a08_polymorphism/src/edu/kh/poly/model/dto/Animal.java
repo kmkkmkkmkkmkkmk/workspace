@@ -44,6 +44,7 @@ public abstract class Animal {
 	// -> 자식 클래스에서 오버라이딩이 강제화된다!
 	public abstract void breath();
 
-	// abstract 설명 깃보고 적어두기 @$@$@!$!@$!@$@!$@!$
+	//The abstract method breath in type
+	//Animal can only be defined by an abstract class
 	
 }
