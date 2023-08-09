@@ -24,7 +24,7 @@ public class ListEx {
 		List list = new ArrayList(3); // 3칸짜리		
 		
 			
-		// 1. boolean add(E e) : 마짐가 요소로 추가
+		// 1. boolean add(E e) : 마지막 요소로 추가
 		// E(Element) : 요소를 뜻하는 상징적인 글자 (자료형 X)
 		// -> Object를 생각하면 편함
 		list.add("아무거나");  // String은 객체
@@ -85,7 +85,69 @@ public class ListEx {
 		}
 	}
 	
-	
-	
-	
+	public void ex2() {
+		
+		// 컬렉션 장점 중 : 여러 타입 저장 가능
+		// 때문에 instanceof로 타입 검사를 해야하는 코드가 추가되어
+		// 코드 길이가 늘어나는 문제점이 발생
+		// -> 그래서 타입을 하나로 제한!
+		//  --> Generics(제네릭)을 이용
+
+		
+		// String으로 정장되는 타입이 제한된 List
+		// -> 컴파일 단계에서 강력한 타입 체크
+		List<String> list = new ArrayList<String>();
+		
+		list.add("닭갈비");
+		list.add("삼계탕");
+		list.add("치킨");
+		list.add("보쌈정식");
+		list.add("샐러드");
+		
+		// list.add(int index, E e) : 중간에 추가(삽입)
+		list.add(0, "곰탕");
+		list.add(3, "카레");
+		
+		// E list.set(int index, E e) :
+		//  지정된 index의 요소를 바꿈(수정)
+		//  반환되는 값은 바뀌기 이전 요소
+		String before = list.set(1, "치즈 닭갈비");
+		System.out.println("before : " + before);
+		
+		// E list.remove(int index) :
+		//  index 번째 요소를 List에서 제거
+		//  반환되는 값은 제거된 요소
+		String target = list.remove(6); // 샐러드
+		System.out.println(target + "제거");
+		
+		
+		// boolean list.contains(E e) :
+		//  list에 요소가 포함되어 있는지 확인
+		System.out.println(list.contains("삼계탕"));
+		System.out.println(list.contains("누룽지 삼계탕"));
+		
+		// int list.indexOf(E e) :                                // *** 알아두면 유용함 *** //
+		//  list에 요소가 존재하면 해당 index 반환
+		//  없으면 -1 반환
+		System.out.println(list.indexOf("삼계탕"));
+		System.out.println(list.indexOf("누룽지 삼계탕"));
+		
+		
+		
+		// void list.clear() : 요소 모드 삭제
+		list.clear();
+		
+		// boolean list.isEmpty() :
+		// 비어있으면 true, 아니면 false
+		System.out.println("비어있음?" + list.isEmpty());
+		
+		
+		for(int i = 0 ; i<list.size() ; i++) {
+			// list.get(i) 
+			// --> String으로 제한된 리스트 요소를 꺼내오기 때문에
+			//	   꺼낸 요소의 자료형은 무조건 String
+			System.out.printf("[%d] : %s \n", i , list.get(i) );
+		
+		}
+	}
 }

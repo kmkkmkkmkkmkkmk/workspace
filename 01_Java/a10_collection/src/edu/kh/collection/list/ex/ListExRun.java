@@ -4,8 +4,8 @@ public class ListExRun {
 	public static void main(String[] args) {
 		
 		ListEx main = new ListEx();
-		main.ex1();
-//		main.ex2();
+//		main.ex1();
+		main.ex2();
 //		main.ex3();
 //		main.ex4();
 //		main.ex5();
