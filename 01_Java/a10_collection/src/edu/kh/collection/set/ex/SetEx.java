@@ -220,7 +220,7 @@ public class SetEx {
 		
 		while(true) {
 			try {
-				System.out.println("금액 입력 iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiic: ");
+				System.out.println("금액 입력 : ");
 				int price = sc.nextInt();
 				
 				if(price == 0) {
