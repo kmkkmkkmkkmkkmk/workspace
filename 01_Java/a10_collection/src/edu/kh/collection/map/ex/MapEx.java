@@ -156,5 +156,8 @@ public class MapEx {
 		
 		System.out.printf("s2 : %d학년 %d반 %d번 %s \n", 
 				s2.getGrade(), s2.getBan(), s2.getNumber(), s2.getName());
+			
+		
 	}
+	
 }
