@@ -6,8 +6,8 @@ public class MapExRun {
 		MapEx example = new MapEx();
 		
 //		example.ex1();
-//		example.ex2();
-		example.ex3();
+		example.ex2();
+//		example.ex3();
 //		example.ex4();
 //		example.ex5();
 //		example.ex6();
