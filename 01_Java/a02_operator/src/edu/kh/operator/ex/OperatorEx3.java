@@ -66,7 +66,7 @@ public class OperatorEx3 {
 		// 13의 배수 == 13으로 나눴을 때 나머지가 0인 수
 		System.out.printf("3913은 13의 배수? %b \n", 3913 % 13 == 0);  
 		
-		 
+		
 		
 		
 		

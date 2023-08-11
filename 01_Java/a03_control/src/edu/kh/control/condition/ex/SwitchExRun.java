@@ -9,9 +9,9 @@ public class SwitchExRun {
 		
 //		sw.ex1();
 //		sw.ex2();
-//		sw.ex3();
+		sw.ex3();
 //		sw.ex4();
-		sw.ex5();
+//		sw.ex5();
 		
 	}
 }

@@ -36,6 +36,7 @@ public class OperatorEx4 {
 		// 결과 저장
 		boolean result = input1 % input2 == 0;
 		
+//		System.out.printf("%d는 %d의 배수? %b", input1, input2, result);
 		System.out.printf("%d는 %d의 배수? %b", input1, input2, input1 % input2 == 0);
 		
 		

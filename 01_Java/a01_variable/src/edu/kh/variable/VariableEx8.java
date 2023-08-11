@@ -25,7 +25,7 @@ public class VariableEx8 {
 		int num1 = 10;
 		long num2 = 100L;
 		
-//		int resul1 = num1 + num2
+//		int result1 = num1 + num2
 		
 		
 		

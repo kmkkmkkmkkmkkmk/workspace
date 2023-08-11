@@ -22,7 +22,7 @@ public class LoopEx2 {
 		}
 	}
 	
-	// 입력 받은 단 출력하기
+  	// 입력 받은 단 출력하기
 	
 	// [실행 화면]
 	// 단 입력 : 3
@@ -203,6 +203,8 @@ public class LoopEx2 {
 	public void ex11() {
 		
 		Scanner sc = new Scanner(System.in);
+		
+		
 		
 		System.out.print("1) 2-9순서대로  /  2) 9-2역순으로 : "); // 1 or 2
 		int input = sc.nextInt();

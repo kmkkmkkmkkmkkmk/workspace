@@ -68,9 +68,16 @@ public class LoopEx {
 	 
 	 // for 예제 4 - 2 부터 20 까지 2씩 증가
 	 public void ex4() {
+		 
+//		 int sum = 0; << 연습해봄
+		 
 		 for(int i = 2 ; i <= 20 ; i += 2) {  // i += 2 랑 i = i + 2는 같다. //
+			
+//			 sum += i; << 연습해봄
+			 
 			 
 			 System.out.println(i);
+//			 System.out.println(sum); << 연습해봄
 		 }
 	 }
 	 
