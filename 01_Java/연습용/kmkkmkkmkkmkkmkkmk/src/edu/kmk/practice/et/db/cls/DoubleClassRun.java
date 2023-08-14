@@ -14,7 +14,7 @@ public class DoubleClassRun {
 //		ex.mkmk2();
 //		ex.mkmk3();
 //		ex.mkmk4();
-		ex.mkmk5();
+//		ex.mkmk5();
 		
 	}
 }

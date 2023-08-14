@@ -14,7 +14,7 @@ public class FieldRun2 extends FieldTest1 /*상속*/ {
 		
 		System.out.println(f1.v1); // public
 		
-//		System.out.println(f1.v2); // protected :  같은 패키지 + 상
+//		System.out.println(f1.v2); // protected :  같은 패키지 + 상속
 //		System.out.println(f1.v3); // (default) :  같은 패키지
 //		System.out.println(f1.v3); // private : 같은 클래스
 
