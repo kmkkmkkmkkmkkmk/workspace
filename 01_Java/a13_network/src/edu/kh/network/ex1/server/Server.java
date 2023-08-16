@@ -37,7 +37,7 @@ public class Server {
 		// 2. 서버용 소켓 객체 생성
 		
 		// ServerSocket : 지정된 포트 번호로 
-		//				  클라이언트 연결이 되는 것을 기다리는 소켓 객
+		//				  클라이언트 연결이 되는 것을 기다리는 소켓 객체
 		ServerSocket serverSocket = null;
 		
 		Socket clientSocket = null;
