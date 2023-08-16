@@ -1,4 +1,4 @@
-package edu.kh.oop.method;
+package edu.kh.oop.calc;
 
 import java.util.Scanner;
 

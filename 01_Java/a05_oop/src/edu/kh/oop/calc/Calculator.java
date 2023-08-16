@@ -1,4 +1,4 @@
-package edu.kh.oop.method;
+package edu.kh.oop.calc;
 
 // 계산기
 public class Calculator {

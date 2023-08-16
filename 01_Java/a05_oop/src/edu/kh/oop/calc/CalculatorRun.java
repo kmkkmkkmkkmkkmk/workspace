@@ -1,4 +1,4 @@
-package edu.kh.oop.method;
+package edu.kh.oop.calc;
 
 public class CalculatorRun {
 	public static void main(String[] args) {
