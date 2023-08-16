@@ -20,13 +20,16 @@ public class Test1 {
 		for(int i=0 ; i<ipInfoList.size() ; i++) {
 			if(ipInfoList.get(i) == ip) {
 				System.out.println(ipInfoList.get(i));
-				break;
+				break;ㅣ=a
 			}
 		}
 		
 		System.out.println("일치하는 ip 사용자가 없습니다.");
 	}
 }
+
+
+//  **********************   틀린 거 이해 하기 전까지 수정 안함  **********************    //
 
 
 /*  오답노트
