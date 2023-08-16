@@ -20,7 +20,7 @@ public class Test1 {
 		for(int i=0 ; i<ipInfoList.size() ; i++) {
 			if(ipInfoList.get(i) == ip) {
 				System.out.println(ipInfoList.get(i));
-				break;ㅣ=a
+				break;
 			}
 		}
 		
