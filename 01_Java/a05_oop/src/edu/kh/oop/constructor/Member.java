@@ -7,7 +7,7 @@ public class Member {
 	// - 클래스(static) 변수
 	
 	// 캡슐화 원칙
-	private String memberId; // 아이다
+	private String memberId; // 아이디
 	private String memberPw; // 비밀번호
 	private String memberName; // 이름
 	private int memberAge; // 나이
