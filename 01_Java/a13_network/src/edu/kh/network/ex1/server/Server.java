@@ -1,6 +1,7 @@
 package edu.kh.network.ex1.server;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -40,13 +41,18 @@ public class Server {
 		//				  클라이언트 연결이 되는 것을 기다리는 소켓 객체
 		ServerSocket serverSocket = null;
 		
-		Socket clientSocket = null;
+		Socket clientSocket = null; // 클라이언트와 연결되는 소켓
 		
-		InputStream is = null;
-		OutputStream os = null;
+		InputStream is = null;  // 클라이언트 -> 서버 스트림
+		OutputStream os = null; // 클라이언트 <- 서버 스트림
 		
+		// 성능 향상을 위한 보조 스트림
 		BufferedReader br = null;
 		PrintWriter pw = null;
+		
+		// 소켓, 스트림 참조 변수를 try, finally에서 모두 사용할 수 있도록
+		// try 구문 위쪽에 참조 변수를 선언
+		
 		
 		try { 
 			// 서버 컴퓨터( 내 컴퓨터)의 IP 관련 정보를 얻어옴
@@ -84,24 +90,54 @@ public class Server {
 			
 			Date now = new Date(); // 현재 시간이 객체에 저장됨
 			
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd   HH:mm:ss");
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd  HH:mm:ss");
 			// 2023-08-16 17:18:34
 			
 			String message = sdf.format(now) + "[서버 접속 성공]";
 			
 			pw.println(message); // 서버 -> 클라이언트로 메세지 출력
-			pw.flush(); // 통로 안에 잔여물를 밀어내다
+			pw.flush(); // 스트림(버퍼)에 기록된 내용을 밀어내는 코드
+						// -> 미작성 시 클라이언트 쪽으로 출력되지 않음   **중요**
 			
 			
 			// 7-2) 서버 <- 클라이언트 메세지 받기(입력)
 			String clientMessage = br.readLine(); // 한 줄 읽기
 			
-			System.out.println("클라이언트로 부터 받은 메세지 " + clientMessage);
+			
+			String clientIP = clientSocket.getInetAddress().getHostAddress();
+			
+			
+			System.out.println(clientIP + "로 부터 받은 메세지 : " + clientMessage);
 			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
+			
+		} finally { // try 구문에서 예외 발생 여부 관계없이 무조건 수행
+			
+			// 사용한 소켓, 스트림을 닫는 코드 작성
+			// (닫다 == 메모리 반환)
+			// -> 메모리 누수 관리
+			
+			// 보통 소켓, 스트림 생 역순으로 close() 구문을 작성
+			
+			try { 
+				// 보조 스트림(br,pw) close() 시 
+				// 보조 스트림 생성에 사용된 기반 스트림(is, os)도 
+				// 같이 close()된다
+				
+				if(br != null) br.close(); //	+ is.close();  << 이건 위 설명처럼 같이 close 되서 안써도됨(써도되긴함)
+				if(pw != null) pw.close(); //	+ os.close();  << 위와 동일
+				
+				if(serverSocket != null) serverSocket.close();
+				if(clientSocket != null) clientSocket.close();
+
+			
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+			
 			
 		}
 		

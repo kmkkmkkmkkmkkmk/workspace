@@ -1,11 +1,5 @@
 package edu.kh.oarr.model.dto;
 
-/**
- * 
- */
-/**
- * 
- */
 public class Student {
 // 학년, 반, 번호, 이름, 국어점수, 영어점수, 수학
 	
