@@ -4,23 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Test1 {
+public class Test1Practice {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		List<IPInfo> ipInfoList = null;
+		List<IPInfoPractice> IPInfoPracticeList = new ArrayList<IPInfoPractice>();
 		
-		ipInfoList.add(new IPInfo("123.123.123.123", "홍길동"));
-		ipInfoList.add(new IPInfo("212.133.7.8"));
-		ipInfoList.add(new IPInfo("177.233.111.222", "고길순"));
+		IPInfoPracticeList.add(new IPInfoPractice("123.123.123.123", "홍길동"));
+		IPInfoPracticeList.add(new IPInfoPractice("212.133.7.8"));
+		IPInfoPracticeList.add(new IPInfoPractice("177.233.111.222", "고길순"));
 		
 		System.out.println("ip 입력 : ");
 		String ip = sc.next();
 		
-		for(int i=0 ; i<ipInfoList.size() ; i++) {
-			if(ipInfoList.get(i) == ip) {
-				System.out.println(ipInfoList.get(i));
-				break;
+		for(int i=0 ; i<IPInfoPracticeList.size() ; i++) {
+			if(IPInfoPracticeList.get(i).equals(ip)) {
+				System.out.println(IPInfoPracticeList.get(i));
+
+				return;
 			}
 		}
 		
