@@ -40,7 +40,7 @@ CARTESIAN PRODUCT
 -- 직원번호, 직원명, 부서코드, 부서명을 조회 하고자 할 때
 SELECT EMP_ID, EMP_NAME, DEPT_CODE
 FROM EMPLOYEE;
--- 직원번호, 직원면, 부서코드는 EMPLOYEE테이블에 조회가능
+-- 직원번호, 직원명, 부서코드는 EMPLOYEE테이블에 조회가능
 
 -- 부서명은은 DEPARTMENT테이블에서 조회 가능
 SELECT DEPT_ID, DEPT_TITLE
@@ -137,7 +137,7 @@ ORDER BY EMP_ID;
 -- 사번, 이름, 직급코드, 직급명 조회
 
 -- ANSI
--- 연결에 사용할 컬럼명이 같은 경우 USING(컬럼명)을 사용함
+-- 연결에 사용할 컬럼명이 ***같은*** 경우 USING(컬럼명)을 사용함
 SELECT EMP_ID, EMP_NAME, 
 	JOB_CODE, JOB_NAME
 FROM EMPLOYEE
@@ -214,7 +214,7 @@ FROM EMPLOYEE
 --JOIN DEPARTMENT ON (DEPT_CODE = DEPT_ID); -- INNER JOIN (21행)
 --LEFT JOIN DEPARTMENT ON (DEPT_CODE = DEPT_ID); -- LEFT JOIN (23행, 하동운 ,이오리)
 --RIGHT JOIN DEPARTMENT ON (DEPT_CODE = DEPT_ID); -- RIGHT JOIN (24행, 마케팅부,국내영업부,해외영업3부)
-FULL JOIN DEPARTMENT ON (DEPT_CODE = DEPT_ID); -- FULL JOIN (26행)
+--FULL JOIN DEPARTMENT ON (DEPT_CODE = DEPT_ID); -- FULL JOIN (26행)
 
 
 -- 오라클 방식 사용 불가
