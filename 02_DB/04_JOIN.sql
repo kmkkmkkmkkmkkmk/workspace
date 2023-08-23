@@ -175,7 +175,7 @@ FROM EMPLOYEE LEFT JOIN DEPARTMENT ON (DEPT_CODE = DEPT_ID);
 --> LEFT JOIN : JOIN 구문 기준으로
 --	왼쪽에 작성된 테이블의 모든 행이 
 --  JOIN 결과에 포함되게 하는 JOIN
-
+-- 하동운, 이오리 추가
 
 -- 오라클 구문
 SELECT EMP_NAME, DEPT_TITLE
@@ -196,6 +196,7 @@ FROM EMPLOYEE RIGHT JOIN DEPARTMENT ON (DEPT_CODE = DEPT_ID);
 --> RIGHT JOIN : JOIN 구문 기준으로
 --	오른쪽에 작성된 테이블의 모든 행이 
 --  JOIN 결과에 포함되게 하는 JOIN
+-- EMPLOYEE <DEPT_CODE>에 없는 DEPARTMENT <DEPT_ID>의 마케팅부/국내영업부/해외영업3부까지 NULL로 추가
 
 
 -- 오라클 구문
@@ -247,7 +248,7 @@ JOIN SAL_GRADE S ON ( SALARY BETWEEN MIN_SAL AND MAX_SAL );
 
 ---------------------------------------------------------------------------------------------------------------
 
--- 5. 자체 조인(SELF JOIN)
+-- 5. 자체 조인(SELF JOIN)    (많이 씀!!!)
 
 -- 같은 테이블을 조인.
 -- 자기 자신과 조인을 맺음
