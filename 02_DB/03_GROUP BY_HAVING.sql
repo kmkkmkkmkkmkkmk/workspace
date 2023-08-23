@@ -37,7 +37,7 @@ GROUP BY DEPT_CODE; -- 같은 부서끼리 그룹을 만들어라
 /*3*/SELECT DEPT_CODE /*묶인 그룹의 이름*/, SUM(SALARY) /*그룹별 급여 합*/ 
 /*1*/FROM EMPLOYEE
 /*2*/GROUP BY DEPT_CODE -- EMPLOYEE 테이블에서
-					-- DEPT_CODE가 같은 행끼리 그룹으로 묶어라
+							-- DEPT_CODE가 같은 행끼리 그룹으로 묶어라
 /*4*/ORDER BY DEPT_CODE; -- 조회 결과(RESULT SET)을 DEPT_CODE  오름차순 정렬
 
 -- EMPLOYEE 테이블에서 
@@ -83,6 +83,7 @@ GROUP BY DEPT_CODE; -- 'D5' , 'D6' 그룹으로 나뉨
 
 
 -- EMPLOYEE 테이블에서 직급 별 2000년도 이후 입사자들의 급여 합을 조회
+
 SELECT JOB_CODE, SUM(SALARY)
 FROM EMPLOYEE
 --WHERE EXTRACT (YEAR FROM HIRE_DATE) >= 2000
@@ -90,14 +91,14 @@ WHERE HIRE_DATE >= '2000-01-01'
 GROUP BY JOB_CODE;
 
 
-
 -- * 여러 컬럼을 묶어서 그룹으로 지정 가능
--- *** GROUP BY 사용시 주의사항
 
+-- *** GROUP BY 사용시 주의사항
 --> SELECT문에 GROUP BY절을 사용할 경우
 --  SELECT절에 명시한 조회하려는 컬럼 중
 --  그룹함수가 적용되지 않은 컬럼을 
 --  모두 GROUP BY절에 작성해야함.
+
 
 -- EMPLOYEE 테이블에서 부서 별로 같은 직급인 사원의 급여 합계를 조회하고
 -- 부서코드 오름차순으로 정렬
@@ -117,7 +118,6 @@ ORDER BY DEPT_CODE, SAL_LEVEL;
 
 
 
-
 --------------------------------------------------------------------------------------------------------------------------
 
 -- * HAVING 절 : 그룹함수로 구해 올 그룹에 대한 조건을 설정할 때 사용
@@ -127,10 +127,10 @@ ORDER BY DEPT_CODE, SAL_LEVEL;
 /*5*/SELECT DEPT_CODE, AVG(SALARY)
 /*1*/FROM EMPLOYEE
 /*2*/--WHERE SALARY >= 3000000 -- 급여가 300만 이상인 사원(행)만 조회 결과에 포함
-						--> 그룹 조건에 맞지 않음
+						    	--> 그룹 조건에 맞지 않음
 /*3*/GROUP BY DEPT_CODE
 /*4*/HAVING AVG(SALARY) >= 3000000 -- 묶여진 그룹의 급여 평균이 300만 이상인 경우
-							  -- 조회 결과에 포함 (D6, D9)
+							 	    -- 조회 결과에 포함 (D6, D9)
 /*6*/ORDER BY DEPT_CODE;
 
 
@@ -170,6 +170,7 @@ ORDER BY JOB_CODE;
 -- 3.EMPLOYEE 테이블에서 
 -- 부서별 70년대생의 급여 평균이 300만 이상인 부서를 조회하여
 -- 부서 코드 오름차순으로 정렬하세요
+
 SELECT DEPT_CODE, ROUND(AVG(SALARY)) "급여 평균" 
 FROM EMPLOYEE
 --WHERE SUBSTR(EMP_NO,1,2) >= 70 AND SUBSTR(EMP_NO,1,2) < 80
@@ -179,13 +180,12 @@ WHERE EMP_NO LIKE '7%'
 GROUP BY DEPT_CODE
 HAVING AVG(SALARY) >= 3000000
 ORDER BY DEPT_CODE;
-
-                      
+            
 --------------------------------------------------------------------------------------------------------------                     
 
 -- 집계함수(ROLLUP, CUBE)
 -- 그룹 별 산출한 결과 값의 집계를 계산하는 함수
--- GOURP BY 절에만 작성하는 함수
+-- GROUP BY 절에만 작성하는 함수
 
 
 -- ROLLUP 함수 : 그룹별로 중간 집계 처리를 하는 함수
@@ -204,8 +204,8 @@ ORDER BY 1;
 
 
 ------------------------------------------------
+-- ( 이런 게 있다고 참고만 ㄱㄱㄱㄱ)
 
-( 이런 게 있다고 참고만 ㄱㄱㄱㄱ)
 -- CUBE 함수 : 그룹별 산출한 결과를 집계하는 함수이다.
 -- * 그룹으로 지정된 모든 그룹에 대한 집계와 총 합계를 구하는 함수
 
@@ -233,7 +233,7 @@ WHERE DEPT_CODE IS NULL;
 
 -- * SET OPERATION(집합 연산)
 -- 여러 개의 SELECT 결과물을 하나의 쿼리로 만드는 연산자
--- 여러가지의 조건이 있을 때 그에 해당하는 여러개의 결과값을 결합시키고 싶을때 사용
+-- 여러가지의 조건이 있을 때 그에 해당하는 여러개의 결과값을 결합시키고 싶을 때 사용
 -- 초보자들이 사용하기 쉽다.(조건들을 어떻게 엮어야 되는지 덜 생각해도 되니깐)
 -- (주의) 집합 연산에 사용되는 SELECT문은 SELECT절이 동일해야함
 
@@ -247,6 +247,7 @@ WHERE DEPT_CODE IS NULL;
 -- 중복된 영역을 제외하여 하나로 합친다.
 
 -- 부서코드가 'D5' 또는 'D6'인 사원 이름, 부서코드 조회
+
 SELECT EMP_NAME, DEPT_CODE 
 FROM EMPLOYEE
 WHERE DEPT_CODE = 'D5'
@@ -256,6 +257,7 @@ UNION
 SELECT EMP_NAME, DEPT_CODE 
 FROM EMPLOYEE
 WHERE DEPT_CODE = 'D6';
+
 
 -- INTERSECT : 여러개의 SELECT한 결과에서 공통 부분만 결과로 추출 (교집합)
 
@@ -270,6 +272,7 @@ INTERSECT
 SELECT EMP_NAME, DEPT_CODE, SALARY 
 FROM EMPLOYEE
 WHERE SALARY > 3000000; 
+
 
 
 -- UNION ALL : 여러개의 쿼리 결과를 하나로 합치는 연산자
@@ -289,10 +292,9 @@ WHERE SALARY > 3000000;
 
 
 
-
-
 -- MINUS : 선행 SELECT 결과에서 다음 SELECT 결과와 겹치는 부분을 제외한 나머지 부분만 추출(차집합)
 -- 부서 코드 D5 중 급여가 300만 초과인 직원 제외
+
 SELECT EMP_NAME, DEPT_CODE, SALARY 
 FROM EMPLOYEE
 WHERE DEPT_CODE = 'D5' 
@@ -302,8 +304,6 @@ MINUS
 SELECT EMP_NAME, DEPT_CODE, SALARY 
 FROM EMPLOYEE
 WHERE SALARY > 3000000; 
-
-
 
 
 
@@ -321,5 +321,3 @@ SELECT PHONE, 1000000 FROM EMPLOYEE
 WHERE EMP_ID = 201
 UNION
 SELECT '홍길동', 4000000 FROM DUAL;
-
-

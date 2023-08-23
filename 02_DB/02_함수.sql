@@ -27,7 +27,7 @@ SELECT 'HELLO WORLD', LENGTH('HELLO WORLD') FROM DUAL;
 ---------------------------------------------------------------
 
 -- INSTR(문자열 | 컬럼명, '찾을 문자열' [ ,   찾을 시작 위치 [ ,   순번]]
--- 찾을 시작 위치부터 지정된 순번쨰 찾은 문자열의 시작 위치를 반환
+-- 찾을 시작 위치부터 지정된 순번째 찾은 문자열의 시작 위치를 반환
 
 -- 문자열에서 맨 앞에있는 'B'의 위치를 조회
 SELECT 'AABAACAABBAA', INSTR('AABAACAABBAA', 'B') 
@@ -37,7 +37,7 @@ FROM DUAL;   --  3
 SELECT 'AABAACAABBAA', INSTR('AABAACAABBAA', 'B', 5) 
 FROM DUAL;   --  9
 
--- 문자열 검색을 5번부터 시작해서 두번 째오는 'B'의 위치를 조회
+-- 문자열 검색을 5번부터 시작해서 두번째 나오는 'B'의 위치를 조회
 SELECT 'AABAACAABBAA', INSTR('AABAACAABBAA', 'B', 5, 2) 
 FROM DUAL;   --  10
 
@@ -112,7 +112,7 @@ SELECT 123.456 ,
 		ROUND(123.456),  -- 123
 		ROUND(123.456, 1), -- 123.5
 		ROUND(123.456, 2), -- 123.46
-		ROUND(123.456, -1) -- 120
+		ROUND(123.456, -1), -- 120
 		ROUND(123.456, -2) -- 100
 FROM DUAL;
 
@@ -123,7 +123,7 @@ SELECT -123.5,
 		TRUNC(-123.5),   --   -123  (.5 버림)
 		FLOOR(-123.5),   --   -124  (.5 내림)
 		TRUNC(2.5),  FLOOR(2.5)
-FROM DUAL;
+FROM DUAL; 
 
 ---------------------------------------------------------------
 -- <날짜 관련 함수>
@@ -424,7 +424,8 @@ SELECT EMP_ID, EMP_NAME, SALARY,
 		
 FROM EMPLOYEE
 WHERE DEPT_CODE IN ('D6',  'D9')
-ORDER BY JOB_CODE  /*ASC 생략 가능*/;
+ORDER BY JOB_CODE;  /*ASC 생략 가능*/
+
 
 
 
@@ -443,6 +444,7 @@ SELECT SUM(SALARY) FROM EMPLOYEE;
 /*3*/SELECT SUM(SALARY)			-- 3) 모인 행들의 급여 합을 조회
 /*1*/FROM EMPLOYEE 				-- 1) EMPLOYEE  테이블에서
 /*2*/WHERE DEPT_CODE = 'D6';    -- 2) DEPT_CODE가 'D6'인 행들만 모아서
+
 
 -- 2000년 이후(2000년 포함) 입사자들의 급여 합
 SELECT SUM(SALARY)
@@ -514,7 +516,7 @@ SELECT COUNT (DISTINCT DEPT_CODE) FROM EMPLOYEE; -- 6
 
 
 -- EMPLOYEE 테이블에 존재하는 여자 사원의 수
-SELECT COUNT(*) FROM EMPLOYEE
+SELECT COUNT(*) FROM EMPLOYEE 
 WHERE SUBSTR(EMP_NO,8,1) = '2'; 
 
 
@@ -522,6 +524,8 @@ WHERE SUBSTR(EMP_NO,8,1) = '2';
 SELECT COUNT(*) FROM EMPLOYEE
 WHERE SUBSTR(EMP_NO,8,1) = '1'; 
 
+
+-- DECODE(컬럼명 | 계산식, 조건1, 결과1, 조건2, 결과2, ... [,아무것도 만족 X])
 -- EMPLOYEE 테이블에 존재하는 남자, 여자 사원의 수
 SELECT COUNT( DECODE ( SUBSTR(EMP_NO,8,1) , '1' , '남자' , NULL) )  남자,
 	COUNT( DECODE ( SUBSTR(EMP_NO,8,1) , '2' , '여자' , NULL) )  여자
