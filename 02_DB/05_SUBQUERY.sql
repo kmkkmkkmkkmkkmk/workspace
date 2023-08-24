@@ -727,14 +727,14 @@ WHERE E.JOB_CODE = J.JOB_CODE ;
 
 -- 1. 전지연 사원이 속해있는 부서원들을 조회하시오 (단, 전지연은 제외)
 -- 사번, 사원명, 전화번호, 고용일, 부서명
-SELECT EMP_ID, EMP_NAME, PHONE, HIRE_DATE
-FROM EMPLOYEE 
-GROUP BY 
+SELECT EMP_ID, EMP_NAME, PHONE, HIRE_DATE FROM EMPLOYEE
+WHERE 
+
 
 -- 2. 고용일이 2000년도 이후인 사원들 중 급여가 가장 높은 사원의
 -- 사번, 사원명, 전화번호, 급여, 직급명을 조회하시오.
 SELECT EMP_ID, EMP_NAME, PHONE, SALARY, JOB_NAME
-FROM 
+
 
 
 
