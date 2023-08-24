@@ -327,9 +327,24 @@ AND   LOCATION_ID = LOCAL_CODE;
 -- 사번, 이름, 직급명, 부서명, 근무지역명, 급여를 조회하세요
 
 -- ANSI
+SELECT EMP_ID, EMP_NAME, JOB_NAME, DEPT_TITLE, LOCAL_NAME, SALARY
+FROM EMPLOYEE
+JOIN JOB USING(JOB_CODE)
+JOIN DEPARTMENT ON(DEPT_CODE = DEPT_ID)
+JOIN LOCATION ON(LOCATION_ID  = LOCAL_CODE)
+WHERE JOB_NAME =  '대리'
+AND LOCAL_NAME LIKE 'ASIA%';
+
+
 
 -- 오라클 전용
-
+SELECT EMP_ID, EMP_NAME, JOB_NAME, DEPT_TITLE, LOCAL_NAME, SALARY
+FROM EMPLOYEE E, JOB J, DEPARTMENT, LOCATION
+WHERE E.JOB_CODE = J.JOB_CODE 
+AND   DEPT_CODE = DEPT_ID
+AND   LOCATION_ID = LOCAL_CODE
+AND   JOB_NAME = '대리'
+AND   LOCAL_NAME LIKE 'ASIA%';
 
 
 
@@ -344,12 +359,17 @@ AND   LOCATION_ID = LOCAL_CODE;
       
       
 -- 2. 이름에 '형'자가 들어가는 직원들의 사번, 사원명, 부서명을 조회하시오.
-
+SELECT EMP_ID, EMP_NAME, JOB_NAME
+FROM EMPLOYEE
+JOIN JOB USING(JOB_CODE)	
+WHERE EMP_NAME LIKE '%형%';
 
 
 -- 3. 해외영업 1부, 2부에 근무하는 사원의 
 -- 사원명, 직급명, 부서코드, 부서명을 조회하시오.
+-- + 사번 오름차순 정렬
 
+ 
 
 --4. 보너스포인트를 받는 직원들의 사원명, 보너스포인트, 부서명, 근무지역명을 조회하시오.
 
