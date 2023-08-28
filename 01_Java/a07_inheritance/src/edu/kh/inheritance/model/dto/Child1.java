@@ -1,7 +1,7 @@
 package edu.kh.inheritance.model.dto;
 
 // 상속 키워드 : extends
-// public class 자식클래스 extends 부모클래
+// public class 자식클래스 extends 부모클래스
 public class Child1 extends Parent{
 
 	private String car;
@@ -32,13 +32,12 @@ public class Child1 extends Parent{
 	// * 오버라이딩( Overrinding ) *
 	// - 위로 올라타다
 	//  -> 코드를 덮어 씌움
-	// - 부모로부터 상송 받은 메서드를
+	// - 부모로부터 상속 받은 메서드를
 	//	 자식이 원하는 형태로 재정의 하는 것
 	
 	// 오버라이딩 특징
 	// - 부모의 메서드와 반환형, 메서드명, 매개변수까지 똑같음
 	// - 내부코드는 다름
-	
 	
 	
 	// Annotation(@, 어노테이션)
@@ -57,8 +56,6 @@ public class Child1 extends Parent{
 	}
 	
 	
-	
-	
 	// 오버라이딩 연습
 	// 부모로부터 상속 받은 getMoney()를 재정의
 	@Override
@@ -68,32 +65,6 @@ public class Child1 extends Parent{
 				// 부모의 getMoney()
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }
