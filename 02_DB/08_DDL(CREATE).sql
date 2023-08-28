@@ -229,7 +229,7 @@ CREATE TABLE USER_USED_UK(
     PHONE VARCHAR2(30),
     EMAIL VARCHAR2(50),
 
-    -- 테이블 레벨 제약 조건(테이블 기본 구조 완성 후 제약조건 추ㅏ)
+    -- 테이블 레벨 제약 조건(테이블 기본 구조 완성 후 제약조건 추가)
     -- UNIQUE(USER_ID)  -- 제약조건(컬럼명) -> 제약조건명 미지정
     CONSTRAINT USER_ID_U UNIQUE(USER_ID) --> 제약 조건명 지정
     );
