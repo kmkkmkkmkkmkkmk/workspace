@@ -26,6 +26,7 @@
     
     [SAVEPOINT 사용법]
     
+    
     SAVEPOINT 포인트명1;
     ...
     SAVEPOINT 포인트명2;
@@ -116,51 +117,3 @@ SELECT * FROM DEPARTMENT3;
 -- 'D0' 삭제 구문도 취소 -> 그냥 ROLLBACK
 ROLLBACK;
 SELECT * FROM DEPARTMENT3;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -334,7 +334,7 @@ DELETE FROM EMPLOYEE2 ;
 
 SELECT * FROM EMPLOYEE2;
 
-ROLLBACK; -- DML(INSERT, UPDATE, DELELTE) 실행 취소
+ROLLBACK; -- DML(INSERT, UPDATE, DELELTE) 실행 취소GRADE_CODE NUMBERGRADE_CODE NUMBEGRADE_CODE NUMBEGRADE_CODE NUMBE
 
 ---------------------------------------------------------------------------------------------
 
