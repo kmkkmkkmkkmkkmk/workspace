@@ -648,7 +648,7 @@ VALUES(2, 'user02', 'pass02', '홍길동', '남자', '010-1234-5678', 'hong123@k
 -- ORA-02290: 체크 제약조건(A230724_KMK.GENDER_CHECK)이 위배되었습니다
 
 SELECT * FROM USER_USED_CHECK;
-UPDATE USER_USED_CHECK 
+sE USER_USED_CHECK 
 SET GENDER = '여'
 WHERE USER_NO = 1; -- 성공
 
@@ -767,6 +767,7 @@ AS SELECT *
 	WHERE 1 = 0;
 
 SELECT * FROM DEPARTMENT_COPY;
+----------------------------------------------------------------------------------------------------------------
 
 
 -- 9. 제약조건 추가
