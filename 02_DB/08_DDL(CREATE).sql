@@ -335,7 +335,8 @@ CREATE TABLE USER_USED_PK(
 );
 
 INSERT INTO USER_USED_PK
-VALUES(1, 'user01', 'pass01', '홍길동', '남', '010-1234-5678', 'hong123@kh.or.kr');
+VALUES(1, 'user01'
+, 'pass01', '홍길동', '남', '010-1234-5678', 'hong123@kh.or.kr');
 
 INSERT INTO USER_USED_PK
 VALUES(1, 'user02', 'pass02', '이순신', '남', '010-5678-9012', 'lee123@kh.or.kr');
