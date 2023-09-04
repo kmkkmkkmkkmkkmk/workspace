@@ -1,5 +1,6 @@
 package edu.kh.jdbc.view;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
@@ -38,6 +39,10 @@ public class ProjectView {
 	            System.out.println("4. 회원 탈퇴"); // MEMBER_DEL_FL = 'Y'  UPDATE
 	            System.out.println("5. MEMBER 테이블 전체 조회");
 	            System.out.println("6. 게시글 작성"); // BOARD 테이블에 INSERT
+	            // 게시글 번호, 제목, 작성일, 조회수, 작성자번호, 작성자 닉네임
+		         // 게시글 번호 내림차순으로 조회
+		         // 단, 삭제되지 않은 글만 조회(BOARD_DEL_FL = 'N')
+	            System.out.println("7. 게시글 목록 조회"); // selectBoardList()
 	            System.out.println("0. 프로그램 종료");
 	            
 	            System.out.print("메뉴 선택 >> ");
@@ -51,6 +56,11 @@ public class ProjectView {
 	            case 4 : updateDelFl(); break;
 	            case 5 : selectAllMember(); break;
 	            case 6 : insertBoard(); break;
+	            case 7 : selectBoardList(); break;
+	            
+	        
+	            
+	            
 	            case 0 : System.out.println("\n--- 프로그램 종료 ---\n");break;
 	            default : System.out.println("\n*** 메뉴 번호만 입력해주세요 ***\n");
 	            }
@@ -104,18 +114,18 @@ public class ProjectView {
 	 *  로그인 화면
 	 */
 	private void login() {
-		System.out.println("\n*@*@*@ 로그인 @*@*@*\n");
+		System.out.println("\n*@*@*@ 로그인 @*@*@*\n"); // 로그인 하라는 화면이 보여져야하기때문에 이 코드를 작성
 		
-		System.out.print("이메일 : ");
-		String email = sc.next();
+		System.out.print("이메일 : "); // 로그인 시 필요한 정보1
+		String email = sc.next(); // 필요한 정보1 입력 받기
 		
-		System.out.println("비밀번호 : ");
-		String pw = sc.next();
+		System.out.println("비밀번호 : "); // 로그인 시 필요한 정보2
+		String pw = sc.next(); // 필요한 정보2 입력 받기
 		
 		// 로그인 서비스 호출 후 결과 (Member) 반환 받기
-		Member member = service.login(email, pw);
+		Member member = service.login(email, pw); // 커넥션에서 정보확인 후 반환
 		
-		// 로그인 결과에 따라 출력하기
+		// 로그인 결과에 따라 출력하기 
 		if(member != null) {
 			System.out.println("\n로그인 성공!\n");
 			System.out.println(member);
@@ -228,7 +238,7 @@ public class ProjectView {
 		System.out.println("\n***** 게시글 작성 *****\n");
 		
 		// 로그인 여부 확인
-		if(loginMember == null) {
+		if(loginMember == null) {  //Member객체(로그인한 회원 - 16번째 줄) 
 			System.out.println("\n***** 로그인 후 이용해주세요 *****\n");
 			return;
 		} 
@@ -252,7 +262,7 @@ public class ProjectView {
 		}
 		
 		// Board 테이블에 삽입하는 서비스 호출 후 결과 반환 받기
-		int result = service.insertBoard(title, content, loginMember.getMemberNo());
+		int result = service.insertBoard(title, content, loginMember.getMemberNo()); // loginMember.getMemberNo << 로그인한 정보에서 회원번호만 꺼내오겠다!
 							// 제목	,	내용	, 작성자 회원 번호
 		
 		if(result > 0 ) { // 삽입 성공 시
@@ -261,13 +271,21 @@ public class ProjectView {
 		} else {
 			System.out.println("\n***** 게시글 등록 실패 *****\n");
 		}
-		
-		
 	}
 	
 	
 	
-	
+	/**
+	 *  게시글 목록 조회
+	 */
+	private void selectBoardList() {
+		System.out.println("--- 게시글 목록 조회 ---");
+		
+		
+		
+		
+		
+	}
 	
 	
 	

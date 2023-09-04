@@ -8,6 +8,7 @@ import java.util.List;
 
 import edu.kh.jdbc.model.dao.ProjectDAO;
 import edu.kh.jdbc.model.dto.Member;
+import edu.kh.jdbc.view.Board;
 
 public class ProjectService {
 
@@ -41,10 +42,10 @@ public class ProjectService {
 	 * @param pw
 	 * @return
 	 */
-	public Member login(String email, String pw) {
+	public Member login(String email, String pw) { // 매개변수 생성
 		
 		// 1. 커넥션 생성
-		Connection conn = getConnection();
+		Connection conn = getConnection(); 
 		
 		// 2. DAO 메서드 호출
 //		Member member = dao.login(conn, email, pw); // PreparedStatement
@@ -141,6 +142,7 @@ public class ProjectService {
 		
 		return result;
 	}
+
 
 
 
