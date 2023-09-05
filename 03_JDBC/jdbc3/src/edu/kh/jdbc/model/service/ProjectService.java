@@ -7,8 +7,8 @@ import java.sql.Connection;
 import java.util.List;
 
 import edu.kh.jdbc.model.dao.ProjectDAO;
+import edu.kh.jdbc.model.dto.Board;
 import edu.kh.jdbc.model.dto.Member;
-import edu.kh.jdbc.view.Board;
 
 public class ProjectService {
 
@@ -122,6 +122,9 @@ public class ProjectService {
 	}
 
 	
+
+	
+	
 	
 	/** 게시글 작성
 	 * @param title
@@ -143,46 +146,114 @@ public class ProjectService {
 		return result;
 	}
 
+	
+	/** 게시글 목록 조회
+	 * @return boardList
+	 */
+	public List<Board> selectBoardList() {
+		Connection conn = getConnection();
+		
+		List<Board> boardList = dao.selectBoardList(conn);
+		
+		close(conn);
+		
+		return boardList;
+	}
+	
+	
+	
+	/** 게시글 상세 조회
+	 * @param boardNo
+	 * @return
+	 */
+	public Board selectBoard(int sort) {
+		
+		Connection conn = getConnection();
+		
+		// 1) DAO - 게시글 상세 조회 메서드 호출  >> dao로 생성
+		Board board = dao.selectBoard(conn, sort);
+		
+		// 2) 게시글 상세 조회 결과가 있을 경우  << dao 에서 돌아옴
+		//  -> 조회수 증가(incrementReadCount(게시글 번호)) 수행
+		if(board != null) {
+			
+			int result = dao.incrementReadCount(conn, sort);
+			
+			// 트랜잭션 처리
+			if(result > 0 )	 {
+					commit(conn); 
+					
+					// DB와 데이터 동기화
+					// (DB에서만 조회수가 1 증가하기 때문에
+					//  조회해둔 board에도 조회수 1을 증가시킨다)
+					board.setReadCount(board.getReadCount() + 1);
+			}
+			
+			else			 rollback(conn);
+		}
+		
+		close(conn);
+		
+		
+		
+		
+		return board;
+	}
+
+	
+	
+	
+	/** 작성자 확인
+	 * @param boardNo
+	 * @param memberNo
+	 * @return check
+	 */
+	public int writerCheck(int boardNo, int memberNo) {
+		Connection conn = getConnection();
+		int check = dao.writerCheck(conn, boardNo, memberNo);
+		close(conn);
+		return check;
+	}
 
 
 
+	/** 게시글 삭제
+	 * @param boardNo
+	 * @return result
+	 */
+	public int deleteBoard(int boardNo) {
+		Connection conn = getConnection();
+		int result = dao.deleteBoard(conn, boardNo);
+		
+		if(result > 0)	commit(conn);
+		else 			rollback(conn);
+		
+		close(conn);
+		return result;
+	}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	/** 게시글 수정
+	 * @param title
+	 * @param content
+	 * @param boardNo
+	 * @return
+	 */
+	public int updateBoard(String title, String content, int boardNo) {
+		Connection conn = getConnection();
+		int result = dao.updateBoard(conn, title, content, boardNo);
+		
+		if(result > 0)	commit(conn);
+		else 			rollback(conn);
+		
+		close(conn);
+		return result;
+	}
+	
+	
+	
+	
 
 
 
