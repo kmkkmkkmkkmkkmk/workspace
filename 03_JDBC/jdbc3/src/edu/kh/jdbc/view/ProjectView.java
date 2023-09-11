@@ -87,7 +87,6 @@ public class ProjectView {
 	            
 	            
 	            
-	            System.out.println("11. 김민규 찾아라~");
 	            
 	            System.out.println("0. 프로그램 종료");
 	            
@@ -381,6 +380,22 @@ public class ProjectView {
 		
 		
 	}
+	
+	/** 게시글 번호를 입력 받아 <br>
+	 * 게시글 작성자가 로그인한 회원이 맞는지 확인하는 메서드
+ 	 * @return check(아니면 0, 맞으면 게시글 번호 반환)
+	 */
+	private int writerCheck() {
+		System.out.print("게시글 번호 입력 : ");
+		int boardNo = sc.nextInt();
+		sc.nextLine(); // 입력 버퍼에 남아있는 개행 문자 제거
+		
+		int result = service.writerCheck(boardNo, loginMember.getMemberNo());
+		
+		if(result > 0) 	return boardNo;
+		else			return 0;
+	}
+	
 	
 	
 	/**

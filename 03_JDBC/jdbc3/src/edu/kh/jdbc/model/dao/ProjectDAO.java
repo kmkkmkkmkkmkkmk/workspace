@@ -408,7 +408,7 @@ public class ProjectDAO {
 			e.printStackTrace();
 		} finally {
 			close(pstmt);
-		}
+		} 
 		
 		return result;
 	}

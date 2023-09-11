@@ -191,11 +191,7 @@ public class ProjectService {
 			
 			else			 rollback(conn);
 		}
-		
 		close(conn);
-		
-		
-		
 		
 		return board;
 	}

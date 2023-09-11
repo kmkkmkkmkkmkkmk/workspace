@@ -2,6 +2,7 @@ package edu.kh.test.view;
 
 import java.util.Scanner;
 
+import edu.kh.test.model.dto.ShopMember;
 import edu.kh.test.model.service.ShopService;
 
 public class TestView {
@@ -14,7 +15,10 @@ public class TestView {
 		System.out.print("ID 입력 : ");
 		String memberId = sc.next();
 		
+		// 서비스 호출 후 결과 반환
+		ShopMember sm = service.selectMember(memberId);
 	
+		System.out.println(sm);
 		
 	}
 	
