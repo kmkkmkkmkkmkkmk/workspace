@@ -1,0 +1,146 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+다 만들고나서 삭제할 예정
+div, main, header, footer, section, article, nav, aside, form
+{border: 1px solid black;}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+
+  max-height: 100vh;
+}
+
+main{
+  width: 1140px;
+  flex-grow: 1;
+}
+
+
+/*----------- header (헤더) -----------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------- 검색창 부분 -----------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------- nav(나브) -----------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------- content(콘텐트) -----------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------- footer(푸터) -----------*/
+
+
+
+
+
+
+
+
+
