@@ -1,45 +1,113 @@
 *{
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   padding: 0;
   margin: 0;
+  /* background-color: black; */
+  color: white;
+}
+
+*:not(header *) {
+  background-color: black;
 }
 
 
 
-
-다 만들고나서 삭제할 예정
+/* 다 만들고나서 삭제할 예정
 div, main, header, footer, section, article, nav, aside, form
-{border: 1px solid black;}
+{border: 1px solid black;} */
 
 body{
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  min-height: 100vh;
+  min-height: 80vh;
 
-  max-height: 100vh;
+  max-height: 80vh;
+
+  background-image: url("../../images/넷플릭스\ 배경화면.jpg");
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-position-x: -100px;
+  background-position-y: -230px;
 }
 
 main{
-  width: 1140px;
+  width: 100%;
   flex-grow: 1;
+  background-color: rgba(0,0,0,0);
 }
 
 
 /*----------- header (헤더) -----------*/
+header{
+  height: 700px;
+  display: flex;
+  margin-top: 10px;
+  background-color: rgba(0,0,0,0);
+  /* flex-wrap: wrap; */
+}
 
+header> section:nth-of-type(1) { width: 15%;}
+header> section:nth-of-type(2) { width: 65%;}
+header> section:nth-of-type(3) { width: 20%;}
 
+/*----- 홈 로고 부분 -----*/
+header > section:first-of-type{ /* 로고 가운데 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
 
 
+#home-logo{
+  width: 150px;
+  background-size: 140%;
+  height: auto;
+  /* 이미지는 고유한 크기가 있는데
+  한쪽 방향을 수정하면 나머지 방향을 같은 비율로 수정하게함
+  (height: auto 안적어도 적용됨)
+  */
+}
 
+.center{
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 
+}
 
 
+/*------ 언어선택 / 로그인 ------*/
+#lang{
+  padding: 10px;
+}
 
 
+#lang-1{
+  width : 110px;
+  height: auto;
+  font-size: 1.1em;
+  padding: 2px;
+  /* border-color: ; */
 
+  position: sticky;
+  border-color: dimgray;
+  background-color: black;
+}
 
+#lang-2{
+  width : 80px;
+  /* height: auto; */
+  font-size: 15px;
+  /* border-color: ; */
+  padding: 5px;
+  
+  position: sticky;
+  background-color: rgba(255, 0, 0, 0.849);
+  color: white;
+  border : none;
+}
 
 
 
@@ -51,11 +119,31 @@ main{
 
 
 
+/* 이메일창 */
+#emailAddress{
+  background-color: rgba(53, 53, 53, 0.37);
+  height: 50px;
+  width: 500px;
+  
+}
+ 
+#search-btn{
+  background-color: red;
+  height: 70px;
+  font-size: 40px;
+  padding: 5px;
+}
 
 
 
-/*----------- 검색창 부분 -----------*/
 
+/* 대작 영화와 */
+.center{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 
 
@@ -65,8 +153,35 @@ main{
 
 
 
+/* -------- tv 즐기기 --------- */
+.display-1 > form{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
 
 
+/* -------- 어디서나 --------- */
+.display-2 > form{
+  
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+/* -------- 어린이 --------- */
+.display-3 > form{
+  
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+/* -------- 즐겨 보는 --------- */
+.display-4 > form{
+  
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
 
 
 
@@ -74,73 +189,51 @@ main{
 
 
 
+.question {
+  background-color: black;
 
+}
 
+/* 나브nav */
+nav > ul { /* 113번째 줄 / 176번째 줄 */
+  list-style : none;
+}
 
+nav > font {
+  font-size: 1.1em;
+}
 
+/* footer */
+footer{
+  width: auto;
+  height: 1000px;
+  padding: 20px;
+  float: left;
+  
+  /* rgba 16진수(0~255) 작성 방법 */
+  /* r(red), g(green), b(blue), a(alpha, 투명도, 00~ff 높을수록 투명) */
+  background-color: black; 
+  
+  display: flex;
+  justify-content: center; /* 중심축 가운데 정렬 */
+  align-items: center;  /* 교차축 가운데 정렬 */
+  flex-direction: column;
+  color: gray;
+  font-family: unset;
+}
 
-/*----------- nav(나브) -----------*/
 
 
+.fontcontrol-1 { /* left 클래스 객체랑 같이씀 */
+  float: left;
+  font-family:fantasy ;
+  font-style: italic;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----------- content(콘텐트) -----------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----------- footer(푸터) -----------*/
-
-
-
-
-
-
+.fontcontrol-2 {
+  float: right;
+  font-family: serif;
+}
 
 
 

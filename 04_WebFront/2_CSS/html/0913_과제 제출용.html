@@ -1,64 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>0913_과제 제출용</title>
   <link rel="stylesheet" href="../css/0913_과제 제출용.css">
 </head>
+
 <body>
   <main>
     <header>
       <section>
+      <section>
         <!-- NETFLIX 정보 -->
         <a>
-          <img src="../../images/넷플릭스 로고.png" alt="홈 로고" id="home-logo">
+          <img src ="../../images/넷플로고.jpg" alt="홈 로고" id="home-logo">
         </a>
       </section>
+       </section>
       <section>
-        <select>
-          <!-- 언어선택 -->
-          <option>한국어</option>
-        </select>
-      </section>
-      <section>
-        <!-- 로그인 버튼 -->
-        <button>로그인</button>
-      </section>
-
-      <section>
-        <!-- 안내 멘트 -->
-        대한민국 최대 히트작과 최고의 스토리가 모두 모인 곳
-        어디서나 자유롭게 시청하세요. 해지는 언제든 가능합니다.
+        <div class="center">
+          <!-- 안내 멘트 -->
+          <h1>대작 영화와 인기 시리즈, 그리고 게임까지! 월 5,500원으로 시작하세요</h1>
+          <div>지금 바로 가입하세요. 해지는 언제든 가능합니다.</div>
+          
+          <div>시청할 준비가 되셨나요? 멤버십을 등록하거나 
+            재시작하려면 이메일 주소를 입력하세요.</div>
+        </div>
         
-        시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.
       </section>
 
+      </fieldset>
+      <section id="lang">
+        <select id="lang-1">
+          <!-- 언어선택 -->
+          <option>&nbsp;&nbsp;&nbsp;&nbsp;한국어&nbsp;</option>
+        </select>
+        <!-- 로그인 버튼 -->
+        <button  id="lang-2">로그인</button>
+      </section>
+      
       <section>
-        <!-- 이메일 주소 입력창 -->
-        <article class="search-area"></article>
-
-        <form action="#" method="get">
-          <fieldset>
-            <input type="text" id="emailAddress" name="emailAddress"
-              placeholder="이메일 주소"
-              autocomplete="off">
-            <!-- 아이디 제출 버튼 -->
-            <button>시작하기></button>
-          </fieldset>
-        </form>
+        
       </section>
-
-
-
-
     </header>
 
+    <section id="emailcenter">
+      <!-- 이메일 주소 입력창 -->
+      <article class="search-area"></article>
 
+      <fieldset>
+        <input type="text" id="emailAddress" name="emailAddress"
+         placeholder="이메일 주소" autocomplete="off">
+
+        <!-- 아이디 제출 버튼 -->
+        <button id="search-btn">&nbsp;&nbsp;시작하기&nbsp;>&nbsp;&nbsp;&nbsp;</button>
+    </section>
+        <section>
+        </section>
+
+        <section>
+          <!-- 팝콘 -->
+          <img src="../../images/5500원.PNG" width="100%">
+        </section>
+
+        <section class="left">
+          <form action="#" method="post">
+            <!-- TV 즐기기  -->
+            <h1 class="fontcontrol-1">TV로 즐기세요</h1>
+            <p></p>
+            <div class="fontcontrol-1">스마트 TV, PlayStation, Xbox, Chromecast, 
+              Apple TV, 블루레이 플레이어 등 다양한 디바이스에서 시청하세요.</div>
+              <section><img src="../../images/tv로 즐기기.PNG" alt=""></section>
+          </form>
+        </section>
+
+        <p></p>
+        
+        <hr id="headline">
+        <section  class="right">
+          <form action="#" method="post">
+          <!-- 어디서나 -->
+          <h1 class="fontcontrol-2">어디서나 자유롭게 시청하세요</h1>
+          <p></p>
+          <div class="fontcontrol-2">각종 영화와 시리즈를 스마트폰, 태블릿, 
+            노트북, TV에서 무제한으로 스트리밍하세요.</div>
+            <section><img src="../../images/어디서나 자유롭게.PNG" alt=""></section>
+          </form>
+          </section>
+        
+          <p></p>
+          <hr id="headline">
+          <section class="left">
+          <form action="#" method="post">
+          <!-- 어린이 전용 -->
+          <h1 class="fontcontrol-1">어린이 전용 프로필을 만들어 보세요</h1>
+          <p></p>
+          <div class="fontcontrol-1">자기만의 공간에서 좋아하는 캐릭터와 즐기는 신나는 모험.
+            자녀에게 이 특별한 경험을 선물하세요. 넷플릭스 회원이라면 무료입니다.</div>
+            <section><img src="../../images/어린이 전용.PNG" alt=""></section>
+          </form>
+          </section>
+
+          <p></p>
+          <hr id="headline">
+          <section class="right">
+          <form action="#" method="post">
+            <h1 class="fontcontrol-2">즐겨 보는 콘텐츠를 저장해 오프라인으로 시청하세요 </h1>
+            <p></p>
+            <div class="fontcontrol-2">광고 없는 멤버십에서만 이용 가능합니다.</div>
+            <img src="../../images/즐겨 보는 콘텐츠.PNG" alt="">
+          </form>
+        </section>
+        
+        <hr id="headline">
+        <section class="question">
+          <!-- 자주묻는 질문 -->
+          <h1>자주 묻는 질문</h1>
+       <nav class="font">
+          <ul>
+            <li>
+              <button>
+                넷플릭스에서 어떤 콘텐츠를 시청할 수 있나요?
+              </button>
+            </li>
+            <li>
+              <button>
+                넷플릭스란 무엇인가요?
+              </button>
+            </li>
+            <li>
+              <button>
+                넷플릭스 요금은 얼마인가요?
+              </button>
+            </li>
+            <li>
+              <button>
+                어디에서 시청할 수 있나요?
+              </button>
+            </li>
+            <li>
+              <button>
+                멤버십을 해지하려면 어떻게 하나요?
+              </button>
+            </li>
+            <li>
+              <button>
+                아이들이 넷플릭스를 봐도 좋을까요?
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+
+
+
+
+
+          <div id="font control-2, emailcenter">시청할 준비가 되셨나요? 
+            멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</div>
+          <section>
+            <!-- 이메일 주소 입력창 -->
+            <article class="search-area"></article>
+
+            <fieldset>
+              <input type="text" id="emailAddress" 
+              name="emailAddress" placeholder="이메일 주소" autocomplete="off">
+
+              <!-- 아이디 제출 버튼 -->
+              <button id="search-btn">&nbsp;&nbsp;시작하기&nbsp;>&nbsp;&nbsp;&nbsp;</button>
+              
+
+        </section>
+
+        </section>
 
 
   </main>
 
-  
+
+
+  <footer>
+    
+    <p>질문이 있으신가요? 문의 전화: <a href="#">080-001-9587</a></p>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">자주 묻는 질문</a>
+          <a href="#">고객 센터</a>
+          <a href="#">계정</a>
+          <a href="#">미디어 센터</a>
+        </li>
+        <li>
+          <a href="#">투자 정보(IR)</a>
+          <a href="#">입사 정보</a>
+          <a href="#">넷플릭스 지원 디바이스</a>
+          <a href="#">이용 약관</a>
+        </li>
+        <li>
+          <a href="#">개인정보 처리방침</a>
+          <a href="#">쿠키 설정</a>
+          <a href="#">회사 정보</a>
+          <a href="#">문의하기</a>
+        </li>
+        <li>
+          <a href="#">속도 테스트</a>
+          <a href="#">법적 고지</a>
+          <a href="#">오직 넷플릭스에서</a>
+          <a href="#"></a>
+        </li>
+      </ul>
+    </nav>
+
+    <select>
+      <!-- 언어선택 -->
+      <option>한국어</option>
+    </select>
+    <div class="left">
+      <p>넷플릭스 대한민국</p>
+
+      <p>넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 
+        제2018-서울종로-0426호 전화번호: 080-001-9587</p>
+      <p>대표: 레지널드 숀 톰프슨</p>
+      <p>이메일 주소: korea@netflix.com</p>
+      <p>주소: 대한민국 서울특별시 종로구 우정국로 26, 
+        센트로폴리스 A동 20층 우편번호 03161</p>
+      <p>사업자등록번호: 165-87-00119</p>
+      <p>클라우드 호스팅: Amazon Web Services Inc.</p>
+      <a href="#">공정거래위원회 웹사이트</a>
+    </div>
+  </footer>
+
+
+
+
 </body>
+
 </html>
