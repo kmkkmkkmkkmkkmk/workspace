@@ -1,0 +1,30 @@
+
+
+.bigBox{
+  width:1300px;
+  display: flex;
+}
+
+
+.colorBox {
+  width: 155px;
+  height: 150px;
+  padding-bottom: 10px;
+  border: 1px solid black;
+  display: flex;
+  margin: 0px 10px 0px 10px;
+}
+
+.inputColor {
+  width: 149px;
+  height: 6px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  margin-left : 10px;
+}
+
+
+#button {
+  width: 700px;
+}

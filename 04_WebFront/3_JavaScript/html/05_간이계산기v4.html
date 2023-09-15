@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_간이계산기v4</title>
+  <link rel="stylesheet" href="../css/05_간이계산기.css">
+</head>
+<body>
+  <h1>간이 계산기 만들기v4</h1>
+
+  <div class="calculator">
+    <div>
+      첫번째 값 : <input type="text" id="n1">
+    </div>
+    <div>
+      두번째 값 : <input type="text" id="n2">
+    </div>
+
+    <!-- 이벤트 호출 시 수행되는 함수에서 
+      매개변수로 전달하는 this는 
+      이벤트가 발생한 요소 자체를 나타낸다!
+    -->
+    <button onclick="calc(this)">+</button>
+    <button onclick="calc(this)">-</button>
+    <button onclick="calc(this)">*</button>
+    <button onclick="calc(this)">/</button>
+    <button onclick="calc(this)">%</button>
+  </div>
+
+  <p>
+    결과 : <span id="result"></span>
+  </p>
+
+  <script src="../js/05_간이계산기v4.js"></script>
+</body>
+</html>
