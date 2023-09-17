@@ -1,0 +1,93 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* font-family: "D2Coding"; */
+}
+
+div, main, header,  section, nav, aside, form
+{border: 1px solid black;}
+
+
+/* header */
+
+header{
+  height: 200px;
+  display: flex;
+}
+
+.title{
+  font-size: 30px;
+  color: rgb(6, 88, 169);
+  border: none;
+  padding: 20px;
+}
+
+.subTitle{
+  border: none;
+  padding-bottom: 10px;
+}
+
+
+/* nav */
+.warning{
+  flex-direction: column;
+  text-align: center;
+  padding: 2px;
+}
+
+.warning2{
+  border: none;
+  font-weight: bold;
+}
+
+
+.midTitle{
+  text-align: center;
+}
+
+.table{
+  box-sizing: border-box;
+  text-align: left;
+  padding: 15px 40px;
+}
+
+
+.checkbox{
+  text-align: center;
+  padding: 5px;
+  border: none;
+}
+
+.joinUs{
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+#joinUsButton{
+  width: 100px;
+  height: 50px;
+  background-color: #b8c7f6;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+
+/* footer */
+.copyRight{
+  padding-top: 3px;
+  border: none;
+}
+
+#noneLabel{
+  padding-top: 2px;
+  padding-bottom: 10px;
+}
