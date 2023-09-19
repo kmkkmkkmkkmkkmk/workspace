@@ -1,0 +1,17 @@
+code{
+  margin: 20px;
+  padding: 10px;
+  border: 4px solid black;
+  border-radius: 10px;
+  background-color: lightgreen;
+  font-weight: bold;
+  font-family: '맑은고딕';
+  white-space: pre-wrap; /* 내용을 작성된 형태 그대로 출력(pre태그) */
+  display: block;
+}
+
+.important{
+  color: red;
+  font-size: 30px;
+  background-color: skyblue;
+}

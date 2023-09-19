@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08_공부하세요!!</title>
+  <link rel="stylesheet" href="../css/08_공부하세요!!.css">
+</head>
+<body>
+  
+  <h3>공부하세요!!</h3>
+  <fieldset class="studyHarder">
+    <table>
+      <tr>
+        <th>
+          너비 :  <td><input type="number" size="5" id="width">px</td>
+        </th>
+        <th>
+          높이 :  <td><input type="number" id="height" size="5" class="all">px</td>
+        </th>
+      </tr>
+      
+      <tr>
+        <th>
+          글자크기 :  <td><input type="number" id="fontSize" size="5px" class="all fontSize">px</td>
+        </th>
+        <th>
+          굵기 :  <td>보통<input type="radio" name="fw" > 굵게<input type="radio"  name="fw" ></td>
+        </th>
+
+      </tr>
+      
+      <tr>
+        <th>
+          글자색 :  <td><input type="text"  id="fc"></td>
+        </th>
+        <th>
+          배경색 :   <td><input type="text"  id="bcc" class="all"></td>
+        </th> 
+      </tr>
+      
+      <tr>
+        <th>
+          가로정렬 : <td>왼쪽<input type="radio" class="left"> 가운데<input type="radio"> 오른쪽<input type="radio"></td>
+        </th>
+      </tr>
+      
+      <tr>
+        <th>
+          세로정렬 : <td>위<input type="radio" class="all"> 가운데<input type="radio"> 아래<input type="radio"></td>
+        </th>
+      </tr>
+    </table>
+
+    <div class="word">출력 문자열 : <input type="text" size="50" id="outPut"> </div>
+    <button id="btn">적용하기</button>
+
+    <br>
+    <br>
+
+    <div id="outPut2"></div>
+
+  </fieldset>
+
+
+
+
+
+
+  <script src="../js/08_공부하세요!!.js"></script>
+</body>
+</html>

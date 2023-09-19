@@ -1,0 +1,17 @@
+
+.studyHarder{
+  border: none;
+}
+
+.word{
+  font-weight: bold;
+}
+
+#outPut2{
+  border: 1px solid black;
+  background-color: black;
+}
+
+#btn{
+  justify-content: center;
+}
