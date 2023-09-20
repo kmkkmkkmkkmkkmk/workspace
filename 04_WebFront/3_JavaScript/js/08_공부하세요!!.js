@@ -105,12 +105,6 @@ applyBtn.addEventListener("click", function(){
 //     outPut2.style.width = width.value + "px";
 //   }
 
-  
-
-
-
-
-
 // });
 
 
