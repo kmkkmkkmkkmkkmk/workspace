@@ -7,8 +7,110 @@
   <link rel="stylesheet" href="../css/08_공부하세요!!.css">
 </head>
 <body>
+  <div class="container">
+    
+    <table class="controller">
+      <tr>
+        <th>너비 : </th>
+        <td><input type="number" min="1" max="1000" id="box-width"> px</td>
+        <th>높이 : </th>
+        <td><input type="number" min="1" max="1000" id="box-height"> px</td>
+      </tr>
+
+      <tr>
+        <th>글자크기 : </th>
+        <td><input type="number" min="1" max="100" id="fs"> px</td>
+        <th>굵기 : </th>
+        <td>
+          <label>보통 <input type="radio" name="fw" value="normal"></label>
+          <label>굵게 <input type="radio" name="fw" value="bold"></label>
+         <!--  <label>보통 <input type="radio" name="fw" value="N"></label>
+          <label>굵게 <input type="radio" name="fw" value="B"></label> -->
+        </td>
+      </tr>
   
-  <h3>공부하세요!!</h3>
+      <tr>
+        <th>글자색 : </th>
+        <td><input type="text" id="box-font-color"></td>
+        <th>배경색 : </th>
+        <td><input type="text" id="box-bg-color"></td>
+      </tr>
+  
+      <tr>
+        <th>가로정렬 : </th>
+        <td colspan="3">
+         <!--  <label>왼쪽 <input type="radio" name="align-row" value="L"></label>
+          <label>가운데 <input type="radio" name="align-row" value="C"></label>
+          <label>오른쪽 <input type="radio" name="align-row" value="R"></label> -->
+          <label>왼쪽 <input type="radio" name="align-row" value="flex-start"></label>
+          <label>가운데 <input type="radio" name="align-row" value="center"></label>
+          <label>오른쪽 <input type="radio" name="align-row" value="flex-end"></label>
+        </td>
+      </tr>
+  
+      <tr>
+        <th>세로정렬 : </th>
+        <td colspan="3">
+          <!-- <label>위 <input type="radio" name="align-col" value="T"></label>
+          <label>가운데 <input type="radio" name="align-col" value="C"></label>
+          <label>아래 <input type="radio" name="align-col" value="B"></label> -->
+          <label>위 <input type="radio" name="align-col" value="flex-start"></label>
+          <label>가운데 <input type="radio" name="align-col" value="center"></label>
+          <label>아래 <input type="radio" name="align-col" value="flex-end"></label>
+        </td>
+      </tr>
+
+      <tr>
+        <th>출력 문자열 : </th>
+        <td colspan="3">
+         <input type="text" id="content">
+        </td>
+      </tr>
+    </table>
+  
+    <button id="apply-btn">적용하기</button>
+  
+    <div id="box"></div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <h3>공부하세요!!</h3>
   <fieldset class="studyHarder">
     <table>
       <tr>
@@ -60,7 +162,7 @@
 
     <div id="outPut2"></div>
 
-  </fieldset>
+  </fieldset> -->
 
 
 

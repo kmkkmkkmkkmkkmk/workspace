@@ -121,7 +121,7 @@ function readValue(){
 
     // 요소.scrollHeight : 스크롤 전체 높이
     // 요소.scrollTop : 요소 내부 스크롤의 위치 반환
-    // 요소.scrollTop = 높이 : 스클로 위치를 해당 높이로 이동
+    // 요소.scrollTop = 높이 : 스크롤 위치를 해당 높이로 이동
     bg.scrollTop = bg.scrollHeight;
   }
 
