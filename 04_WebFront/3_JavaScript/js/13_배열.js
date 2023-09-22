@@ -123,7 +123,7 @@ mapBtn.addEventListener("click", () => {
 
 
 
-/* for( (item) of (배열명) ) */
+/* for( (item) of (배열명) )*/
 const forOfBtn = document.getElementById("for-of");
 forOfBtn.addEventListener("click", () => {
 
@@ -134,4 +134,5 @@ forOfBtn.addEventListener("click", () => {
     console.log(li);
     li.innerText = "for of 테스트 중...";
   }
+
 });
