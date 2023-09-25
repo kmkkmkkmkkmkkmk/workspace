@@ -1,0 +1,55 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* text-align: center; */
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* font-family: "D2Coding"; */
+}
+
+#leftTh{
+  display: flex;
+  padding-right: 10px;
+}
+
+.inputBox{
+  width: 210px;
+  border: dashed;
+}
+
+#btn{
+  width: 325px;
+  height: 40px;
+  background-color: rgba(94, 189, 94, 0.301);
+  border: none;
+  color: rgb(26, 77, 26);
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#btn:active{
+  background-color: rgba(55, 177, 55, 0.452);
+}
+
+.check{ color: green; }
+.error{ color: red; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
