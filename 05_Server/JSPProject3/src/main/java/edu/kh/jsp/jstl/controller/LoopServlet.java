@@ -29,9 +29,6 @@ public class LoopServlet extends HttpServlet{
       
       String path = "/WEB-INF/views/jstl/loop.jsp";
       req.getRequestDispatcher(path).forward(req, resp);
-	
-		
-		
 	}
 	
 }
