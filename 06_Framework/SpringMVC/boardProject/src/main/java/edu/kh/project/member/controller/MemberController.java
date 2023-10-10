@@ -81,7 +81,6 @@ public class MemberController {
 		System.out.println(paramMap.get("memberEmail"));
 		System.out.println(paramMap.get("memberPw"));
 		
-		
 		return null;
 	}
 	

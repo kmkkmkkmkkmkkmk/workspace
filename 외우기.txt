@@ -1,0 +1,80 @@
+이제부터 면접 질문임!!!
+외워두자!!!
+
+@RequestMapping
+  - 요청 주소에 따라 이를 처리할 컨트롤러 또는 컨트로럴 메서드를 연결하는 어노테이션
+  - 클레스에 작성 시 : 메서드에 작성될  @RequestMapping의 공통 주소
+  - 메서드에 작성 시 : 요청을 처리할 메서드 연결
+
+
+- 속성
+  = value : 주소(URL)
+  = method : 요청 방식( RequestMethod.GET/POST)
+  = 메서드 레벨에서 속성을 아무것도 작성하지 않고 주소(URL)만 작성하는 경우
+     -> method 관계없이 주소만 일치하면 매핑
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+@PostMapping
+  - @RequestMapping의 POST 버전 (POST 요청만 매핑 처리)
+  - 
+
+
+@GetMapping
+  - @RequestMapping의 GET 버전 (GET 요청만 매핑 처리)
+  - 
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+ViewResolver (응답 화면 해결사)
+  - 컨트롤러의 처리 결과에 따라 보여질 응답화면을 결정하는 역할
+  - src/main/resources/spring/appServlet/servlet-context.xml 파일에 작성됨
+  - forward(요청 위임) 를 쉽게 작성할 수 있도록 하는 역할
+  - prefix(접두사) 속성 : JSP 파일이 모여있는 위치의 공통 경로 ( /WEB-INF/views/ )
+  - suffix(접미사) 속성 : 확장자명 (.jsp) 
+  - Controller에서 반환된 문자열(String) 값 앞에 prefix, 뒤에 suffix 를 붙여서
+    만들어진 경로에 위치한 jsp 파일에 forward를 진행
+  
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 
+
+@Controller
+  - 요청에 따라 알맞은 클래스, 메서드와 매핑하고
+    메서드 처리 결과에 따라  알맞은 응답 화면으로 forward, redirect하는 역할
+
+
+  - 컨트롤러(요청/응답 제어) 역할임을 명시
+    + Bean 등록
+
+
+Bean (객체(instance)와 비슷한 의미)
+  - Spring의 특징 중  IOC(제어 역전)에 의해서
+    개발자가 직접 생성해서 관리하는 객체가 아닌
+    Spring Container(== Spring Framework)가 생성하고 관리하는 객체
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 
+
+@RequestParam(value="name", required="fasle", defaultValue="1")
+[속성]
+value : 전달 받은 input 태그의 name 속성값
+      
+required : 입력된 name 속성값 파라미터 필수 여부 지정(기본값 true)
+-> required = true인 파라미터가 존재하지 않는다면 400 Bad Request 에러 발생
+-> required = true인 파라미터가 null인 경우에도 400 Bad Request
+
+defaultValue : 파라미터 중 일치하는 name 속성 값이 없을 경우에 대입할 값 지정.
+ -> required = false인 경우 사용
+
+
+
+
+
+
+
+
+
+
+
+
+
+
