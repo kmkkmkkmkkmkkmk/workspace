@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시판 프로젝트</title>
 
-     <%-- 
+    <%-- 
         <jsp:include page="jsp파일경로" /> 
 
         - JSP 액션 태그 (jsp에 기본 내장된 태그)
@@ -17,7 +17,7 @@
         - jsp 파일 경로는 webapp 폴더를 기준으로 작성
         - 코드 재사용성 증가!!!
     --%>
-     <jsp:include page="/WEB-INF/views/common/common.jsp" />
+<jsp:include page="/WEB-INF/views/common/common.jsp" />
 
 </head>
 <body>
@@ -29,36 +29,58 @@
 
         <section class="content">
             <section class="content-1">
-
             </section>
 
             <section class="content-2">
+            
+                <%-- 어떤 scope에도 loginMember가 없거나 null이면 --%>
+                <c:if test="${empty loginMember}">
+                    <form action="/member/login" method="POST" id="loginFrm">
+                        <fieldset class="id-pw-area">
+                            <section>
+                                <input type="text" name="memberEmail" 
+                                    placeholder="이메일" autocomplete="off" value="" >
+    
+                                <input type="password" name="memberPw" placeholder="비밀번호">                  
+                            </section>
+                            <section>
+                                <button>로그인</button>
+                            </section>
+                        </fieldset>
+    
+                        <label>
+                            <input type="checkbox" name="saveId"  > 아이디 저장
+                        </label>
+    
+                        <article class="signup-find-area">
+                            <a href="/member/signUp">회원가입</a>
+                            <span>|</span>
+                            <a href="#">ID/PW 찾기</a>
+                        </article>
+                    </form>
+                </c:if>
+                
+                <%-- loginMember가 존재하는 scope가 있을 때 --%>
+                 <c:if test="${not empty loginMember}">
 
-                <form action="/member/login" method="POST" id="loginFrm">
-                    <fieldset class="id-pw-area">
-                        <section>
-                            <input type="text" name="memberEmail" 
-                                placeholder="이메일" autocomplete="off" value="" >
+                    <article class="login-area">
+                        <a href="#">
+                        <img id="memberProfile" src="/resources/images/user.png">
+                        </a>
+                        
+                        <div class="my-info">
+                            <div>
+                                <a href="#" id="nickname">${loginMember.memberNickname}</a>
+                                <a href="/member/logout" id="logoutBtn">로그아웃</a>
+                            </div>
 
-                            <input type="password" name="memberPw" placeholder="비밀번호">                  
-                        </section>
-                        <section>
-                            <button>로그인</button>
-                        </section>
-                    </fieldset>
+                            <p>${loginMember.memberEmail}</p>
+                        </div>
 
-                    <label>
-                        <input type="checkbox" name="saveId"  > 아이디 저장
-                    </label>
-
-                    <article class="signup-find-area">
-                        <a href="/member/signUp">회원가입</a>
-                        <span>|</span>
-                        <a href="#">ID/PW 찾기</a>
                     </article>
-                </form>
 
 
+                 </c:if>
                 
             </section>
         </section>
