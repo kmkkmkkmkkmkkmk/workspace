@@ -65,6 +65,33 @@ required : 입력된 name 속성값 파라미터 필수 여부 지정(기본값 
 defaultValue : 파라미터 중 일치하는 name 속성 값이 없을 경우에 대입할 값 지정.
  -> required = false인 경우 사용
 
+web.xml
+ - 배포 서술자(Deployment Descriptor)
+ - 배포 시 수행할 구문, 설정을 작성하는 문서 
+ - 서버 실행 시 가장 먼저 읽는 파일!!
+
+root-context.xml
+- 프로젝트 전반적으로 사용할 DB 연결 관련 
+  설정, 트랜잭션 처리, 파일 업로드, AOP 관련 내용을 작성하는 파일
+
+@Autowired(자동 연결)
+ - 등록된 Bean 중에서 아래 작성된 필드와 타입이 일치하거나
+   상속 관계에 있는 Bean을 얻어와 필드에 주입하는 어노테이션
+ 
+ - 필드에 주입되는 객체를 직접 만드는 것이 아닌 
+    스프링이 만들고 관리하는 객체를 주입 받는 것 == 의존성 주입(DI)
+
+
+Model 객체
+ - Spring에서 데이터를 전달하는 목적으로 사용하는 객체
+ - 기본 scope == request scope
+ - Model.addAttribute(“key”, value);  구문으로 값 세팅 후 전달
+
+@SessionAttributes
+ - 매개변수로 작성된 문자열과 Model에 
+   추가된 속성의 key값 같으면 해당 Model 속성의 scope를 Session으로 변경
+
+ - 클래스 레벨로 작성(클래스 위에 작성)
 
 
 
