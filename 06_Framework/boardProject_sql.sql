@@ -68,6 +68,10 @@ AND MEMBER_EMAIL = 'member01@naver.com'
 AND MEMBER_PW = 'pass01';
 
 
+-- 샘플 회원 비밀번호 변경(암호화 적용)
+UPDATE "MEMBER" SET
+MEMBER_PW = '$2a$10$MmWZ7hPbrKxQAbLFDG7f2OnHn8yidr6fMh5fyNOX3wNZJjlwNmR2e'
+WHERE MEMBER_NO = 1;
 
 
 
