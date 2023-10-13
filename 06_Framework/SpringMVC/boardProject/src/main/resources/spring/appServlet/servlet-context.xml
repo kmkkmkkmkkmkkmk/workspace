@@ -16,9 +16,8 @@
 		1) 모든 요청을 받아서 주소에 따라 알맞은 컨트롤러 메서드와 매핑
 			-> Handler Mapping 과정에서 요청에 알맞은 컨트롤러 메서드를 찾음
 			  (@RequestMapping, @PostMapping, @GetMapping)
-		
-		
 	-->
+	
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
