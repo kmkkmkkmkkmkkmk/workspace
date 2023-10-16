@@ -55,6 +55,7 @@ VALUES(SEQ_MEMBER_NO.NEXTVAL, 'member01@naver.com', 'pass01', '회원1', '010123
 
 COMMIT;
 
+
 SELECT * FROM "MEMBER";
 
 
