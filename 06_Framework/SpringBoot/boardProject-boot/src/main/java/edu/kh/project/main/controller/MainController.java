@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 public class MainController {
 	
-	@RequestMapping("/") // GET/POst 가리지 않고 "/" 요청 오면 매핑
+	@RequestMapping("/") // GET/Post 가리지 않고 "/" 요청 오면 매핑
 	public String mainPage(Model model) {
 		
 		// Model : 데이터 전달용 객체(기본 scope: request)

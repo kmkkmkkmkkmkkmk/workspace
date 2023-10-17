@@ -113,7 +113,7 @@ MEMBER_DEL_FL = 'Y'
 WHERE MEMBER_NO = '회원번호';
 
 
-
+SELECT * FROM "MEMBER";
 
 
 

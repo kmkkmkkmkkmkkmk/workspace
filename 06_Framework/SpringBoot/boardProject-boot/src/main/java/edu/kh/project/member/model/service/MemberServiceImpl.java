@@ -49,4 +49,46 @@ public class MemberServiceImpl implements MemberService{
 	
 	
 	
+	
+	@Override
+	public int signup(Member inputMember, String[] memberAddress) {
+
+		// 주소가 입력되지 않은 경우
+		if(inputMember.getMemberAddress().equals(",,")) {
+			inputMember.setMemberAddress(null); // null로 변환
+			
+		} else { // 주소를 입력한 경우
+			// 배열 -> 문자열로 합쳐서 inputMember에 추가
+			String address = String.join("^^^", memberAddress);
+			inputMember.setMemberAddress(address);
+		}
+		
+		
+		// 비밀번호 암호화(DB에 암호화된 비밀번호 저장)
+		String encPw = bcrypt.encode(inputMember.getMemberPw());
+		inputMember.setMemberPw(encPw);
+		
+		// Mapper 메서드 호출
+		return mapper.signup(inputMember);
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
