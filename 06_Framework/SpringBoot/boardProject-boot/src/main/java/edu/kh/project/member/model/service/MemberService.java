@@ -10,12 +10,4 @@ public interface MemberService {
 	 */
 	public Member login(Member inputMember);
 
-	
-	/** 회원 가입 서비스
-	 * @param inputMember
-	 * @param memberAddress
-	 * @return result
-	 */
-	public int signup(Member inputMember, String[] memberAddress);
-
 }
