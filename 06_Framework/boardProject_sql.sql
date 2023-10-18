@@ -110,10 +110,15 @@ WHERE MEMBER_NO = '회원 번호' ;
 -- 회원 탈퇴 
 UPDATE "MEMBER" SET 
 MEMBER_DEL_FL = 'Y'
-WHERE MEMBER_NO = '회원번호';
+WHERE MEMBER_NO = '4';
+
+COMMIT;
 
 
 SELECT * FROM "MEMBER";
+
+
+
 
 
 
