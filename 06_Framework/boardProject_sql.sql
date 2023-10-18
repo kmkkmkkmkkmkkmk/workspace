@@ -110,6 +110,13 @@ WHERE MEMBER_NO = '회원 번호' ;
 -- 회원 탈퇴 
 UPDATE "MEMBER" SET 
 MEMBER_DEL_FL = 'Y'
+WHERE MEMBER_NO = '회원번호';
+
+COMMIT;
+
+-- 회원 탈퇴 복구
+UPDATE "MEMBER" SET 
+MEMBER_DEL_FL = 'N'
 WHERE MEMBER_NO = '4';
 
 COMMIT;
@@ -118,6 +125,15 @@ COMMIT;
 SELECT * FROM "MEMBER";
 
 
+
+-- 관리자 권한으로 변경
+SELECT * FROM "MEMBER";
+
+UPDATE "MEMBER" SET 
+AUTHORITY = 2
+WHERE MEMBER_NO = 2;
+ 
+COMMIT;
 
 
 
