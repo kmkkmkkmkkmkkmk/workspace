@@ -50,6 +50,12 @@ public interface AdminMapper {
 	 */
 	int initPw(Map<String, Object> map);
 
+	/** 닉네임으로 조회하기
+	 * @param inputNickname
+	 * @return
+	 */
+	Member selectMember2(String inputNickname);
+
 
 	
 	

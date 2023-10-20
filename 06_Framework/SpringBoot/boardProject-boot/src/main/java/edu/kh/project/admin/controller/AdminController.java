@@ -38,7 +38,7 @@ public class AdminController {
 	}
 	
 	
-	/**
+	/** 이메일로 회원 조회
 	 * @param inputEmail
 	 * @param model
 	 * @return
@@ -155,6 +155,23 @@ public class AdminController {
 		return "redirect:selectMember?inputEmail=" + memberEmail;
 		
 	}
+	
+	
+	
+	@GetMapping("selectNick")
+	public String selectNick(String inputNickname, Model model) {
+		
+		Member searchNick = service.selectMember2(inputNickname);
+		
+		
+		
+		
+		
+		return null;
+	}
+	
+	
+	
 	
 	
 	

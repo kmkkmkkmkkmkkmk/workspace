@@ -258,6 +258,7 @@ nav>ul{
   display: flex;
   width: 60rem;
   margin: 2rem;
+  
 }
 
 .signup{
@@ -413,18 +414,35 @@ footer{
 
 
 .topDiv{
-  border: 3px solid hotpink;
+  border: 0.1px solid hotpink;
+  border-radius: 2.5rem;
   margin-bottom: 3rem;
-  width: 30rem;
+  width: 33rem;
+  background-color: #FFF2D8;
 }
 
 .topBox{
   border: black;
 }
 
+.changeFont{
+  font-size: 1.35rem;
+}
+
+.selectBoard{
+  margin-left:0.6rem;
+}
+
+.boardName{
+  margin-top: 0.2rem;
+  margin-right: 0.45rem;
+}
+
+
 .allBox{
-  border: 3px solid hotpink;
-  background-color: aqua;
+  border: 0.1rem solid hotpink;
+  background-color: #FFF2D8;
+  border-radius: 2rem;
 }
 
 
@@ -434,14 +452,25 @@ footer{
   border: 1px solid black;
   width: 80rem;
   height: 4.5rem;
-  margin: 10px;
-  border-radius: 10px;
+  margin: 1rem;
+  border-radius: 1rem;
   align-items: center;
-  justify-content: center;
-  background-color: blanchedalmond;
+  justify-content: space-around;
+  background-color: #FFE4D6;
 }
 
-
+.boardBox1{
+  display: flex;
+  border: 1px solid black;
+  width: 80rem;
+  height: 4.5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #FFE4D6;
+  font-size: 1.5rem;
+}
 
 
 

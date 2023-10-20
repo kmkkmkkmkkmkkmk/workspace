@@ -83,4 +83,14 @@ public class AdminServiceImpl implements AdminService{
 		return mapper.initPw(map);
 	}
 	
+	@Override
+	public Member selectMember2(String inputNickname) {
+		
+	
+	
+	
+		return mapper.selectMember2(inputNickname);
+	}
+	
+	
 }

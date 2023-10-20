@@ -62,5 +62,11 @@
 	  MEMBER_PW = #{encPw}
 	  WHERE MEMBER_NO = #{memberNo}
 	</update>
+	
+	<!-- 닉네임으로 조회하기 -->
+	<select id="sdfsdf"></select>
+	
+	
+	
 
 </mapper>
