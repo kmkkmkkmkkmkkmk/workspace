@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -187,6 +188,50 @@ public class MemberController {
 	
 	
 	
+	/* [HttpMessageConverter] --- 최대한 외우자
+	 * 	Spring에서 비동기 통신 시
+	 * - 전달되는 데이터의 자료형
+	 * - 응답하는 데이터의 자료형
+	 * 위 두가지를 알맞은 형태로 가공(변환)해주는 객체
+	 * 
+	 * - 문자열, 숫자 <-> TEXT
+	 * - Map <-> JSON
+	 * - DTO <-> JSON
+	 * 
+	 * (참고)
+	 * HttpMessageConverter가 동작하기 위해서는
+	 * Jackson-data-bind 라이브러리가 필요한데
+	 * Spring Boot 모듈에 내장되어 있음 
+	 * (Jackson : 자바에서 JSON 다루는 방법 제공하는 라이브러리)
+	 */
+	
+	
+	/** 이메일 중복 검사
+	 * @param email
+	 * @return 0 또는 1 
+	 */
+	@GetMapping("checkEmail")
+	@ResponseBody
+	public int checkEmail(String email) {
+		return service.checkEmail(email);
+	}
+	
+	
+	
+	/** 닉네임 중복 검사
+	 * @param Nickname
+	 * @return 0 또는 1 
+	 */
+	@GetMapping("checkNickname")
+	@ResponseBody
+	public int checkNickname(String nickname) {
+		
+		return service.checkNickname(nickname);
+	}
+	
+	
+	
+
 	
 	
 }

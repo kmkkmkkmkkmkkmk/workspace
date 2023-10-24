@@ -41,10 +41,5 @@ public interface AdminService {
 	 */
 	int initPw(int memberNo);
 
-	/** 닉네임으로 조회하기
-	 * @param inputNickname
-	 * @return
-	 */
-	Member selectMember2(String inputNickname);
 
 }

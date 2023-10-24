@@ -149,15 +149,38 @@ WHERE MEMBER_NO = 8;
 COMMIT;
 
 
+-- 회원 번호로 이메일 조회
+SELECT MEMBER_EMAIL
+FROM "MEMBER"
+WHERE MEMBER_NO = #{memberNo};
+
+
+-- 이메일로 전화번호 조회
+SELECT MEMBER_TEL 
+FROM "MEMBER"
+WHERE MEMBER_EMAIL = #{memberEmail}
+;
+
+
+-- 이메일 중복 검사(중복O -> 1, 중복X -> 0)
+SELECT COUNT(*) 
+FROM "MEMBER"
+WHERE MEMBER_DEL_FL = 'N'
+AND MEMBER_EMAIL = 'member01@naver.com';
+
+
+-- 닉네임 중복 검사(중복O -> 1, 중복X -> 0)
+SELECT COUNT(*)
+FROM "MEMBER"
+WHERE MEMBER_DEL_FL = 'N'
+AND MEMBER_NICKNAME = #{nickname};
 
 
 
-
-
-
-
-
-
+-- 일부 일치하는 이메일 모두 조회
+SELECT MEMBER_EMAIL
+FROM "MEMBER"
+WHERE MEMBER_EMAIL LIKE '%com%'
 
 
 

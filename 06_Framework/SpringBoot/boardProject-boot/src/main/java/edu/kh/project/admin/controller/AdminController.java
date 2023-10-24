@@ -156,21 +156,16 @@ public class AdminController {
 		
 	}
 	
+	// --------------------------------------------------------------------------
 	
-	
-	@GetMapping("selectNick")
-	public String selectNick(String inputNickname, Model model) {
-		
-		Member searchNick = service.selectMember2(inputNickname);
+	@GetMapping("ajaxTest")
+	public String ajaxTest() {
 		
 		
 		
 		
-		
-		return null;
+		return "admin/ajaxTest";
 	}
-	
-	
 	
 	
 	
