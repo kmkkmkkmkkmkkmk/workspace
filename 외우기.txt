@@ -153,7 +153,7 @@ UncheckedException의 특징
 
 * 트랜잭션 처리를 위해서는 트랜잭션 매니저가 bean으로 등록되어 있어야 함. 
    -> root-context.xml 작성
-   + serlvelt-context.xml에 <tx:annotation-driven/> 추가
+   + servlet-context.xml에 <tx:annotation-driven/> 추가
    
   - 정상 여부는 RuntimeException이 발생했는지 기준으로 결정되며, 
   RuntimeException 외 다른 Exception(대표적으로 SQLException 등)에도 트랜잭션 롤백처리를 적용하고 싶으면 
