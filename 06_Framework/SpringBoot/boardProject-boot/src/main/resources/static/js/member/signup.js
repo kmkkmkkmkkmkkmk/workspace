@@ -38,6 +38,10 @@ const checkObj = {
     "memberTel" : false
 };
 
+
+
+
+
 /* 이메일 유효성 검사 */
 
 // 1) 이메일 유효성 검사에 사용할 요소 모두 얻어오기
@@ -67,10 +71,31 @@ memberEmail.addEventListener("input", () => {
 
     // 입력 받은 이메일이 정규식과 일치하는 경우
     if( regEx.test(memberEmail.value) ){
-        emailMessage.innerText = "유효한 이메일 형식입니다.";
-        emailMessage.classList.add("confirm"); // 초록색 글씨
-        emailMessage.classList.remove("error"); // 빨간 글씨 제거
-        checkObj.memberEmail = true; // 유효한 상태임을 기록
+        
+
+        /* =========== 이메일 중복 검사(비동기) ============ */
+        fetch("/member/checkEmail?email=" + memberEmail.value)
+        .then( response => response.text() )   // 첫번째 then은 응답이 왔을 때 수행, 응답 결과를 text로 파싱
+        .then( result => {                     // 두번째 then은 첫번째 then의 반환된 결과를 이용해 기능 수행
+            if(result == 0) { // 중복 X
+                emailMessage.innerText = "서용 가능한 이메일 입니다.";
+                emailMessage.classList.add("confirm"); // 초록색 글씨
+                emailMessage.classList.remove("error"); // 빨간 글씨 제거
+                checkObj.memberEmail = true; // 유효한 상태임을 기록
+            } else { // 중복 O
+                emailMessage.innerText = "이미 사용 중인 이메일 입니다.";
+                emailMessage.classList.add("error"); // 빨간 글씨
+                emailMessage.classList.remove("confirm"); // 초록색 글씨 제거
+                checkObj.memberEmail = false; // 유효한 상태임을 기록
+
+            }
+        } )                 
+        .catch( e => console.log(e))
+        
+        
+        /* ============================================= */
+
+
     }
     
     // 입력 받은 이메일이 정규식과 일치하는 않은 경우
@@ -81,6 +106,10 @@ memberEmail.addEventListener("input", () => {
         checkObj.memberEmail = false; // 유효하지 않은 상태임을 기록
     }
 });
+
+
+
+
 
 
 /* 인증 번호 유효성 검사 */
@@ -239,10 +268,30 @@ memberNickname.addEventListener("input", () => {
     const regEx = /^[가-힣\w\d]{2,10}$/;
 
     if(regEx.test(memberNickname.value)){
-        nickMessage.innerText = '올바른 닉네임입니다';
-        nickMessage.classList.add("confirm");
-        nickMessage.classList.remove("error");
-        checkObj.memberNickname = true;
+
+        /* ================ 닉네임 중복 검사 ================ */
+        
+        fetch("/member/checkNickname?nickname=" + memberNickname.value)
+        .then( response => response.text() )
+        .then( result => {
+            if(result == 0) { // 중복 X
+                nickMessage.innerText = '사용 가능한 닉네임입니다';
+                nickMessage.classList.add("confirm");
+                nickMessage.classList.remove("error");
+                checkObj.memberNickname = true;
+            } else {
+                nickMessage.innerText = '이미 사용 중인 닉네임입니다';
+                nickMessage.classList.add("error");
+                nickMessage.classList.remove("confirm");
+                checkObj.memberNickname = false;
+
+            }
+
+        } )
+        .catch( e => console.log(e));
+
+
+        /* ================================================== */
     }
     else {
         nickMessage.innerText = '올바른 닉네임을 입력해주세요';
@@ -253,6 +302,13 @@ memberNickname.addEventListener("input", () => {
     }
 
 });
+
+
+
+
+
+
+
 
 
 
