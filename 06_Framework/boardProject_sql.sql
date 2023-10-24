@@ -180,7 +180,7 @@ AND MEMBER_NICKNAME = #{nickname};
 -- 일부 일치하는 이메일 모두 조회
 SELECT MEMBER_EMAIL
 FROM "MEMBER"
-WHERE MEMBER_EMAIL LIKE '%com%'
+WHERE MEMBER_EMAIL LIKE '%${keyword}%';
 
 
 
