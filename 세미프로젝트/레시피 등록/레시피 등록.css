@@ -1,0 +1,280 @@
+/* 다 만들고나서 삭제할 예정
+div, main, header, footer, section, article, nav, aside, form
+{border: 1px solid black;} */
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.sAll{
+  width: 1150px;
+}
+
+.topName{
+  text-align: center;
+  margin: 40px;
+  font-size: 35px;
+}
+
+
+/* 1번째 줄 */
+
+/* 대표사진 */
+#firstLine{
+  display: flex;
+  width: 1150px;
+  height: 450px;
+  margin: auto;
+}
+
+
+.name{
+  border: 7px solid rgb(165, 78, 78);
+  width: 470px;
+  height: 82px;
+  border-radius: 20px 20px 0px 0px;
+}
+.firstPicture{
+  border: 7px solid rgb(165, 78, 78);
+  border-top: 0px solid rgb(165, 78, 78);
+  border-top: 0px;
+  border-radius: 0px 0px 20px 0px;
+  width: 470px;
+  height: 316px;
+}
+
+.main-Picture{
+  width: 50%;
+  text-align: center;
+  
+}
+
+
+/* 요리영상 */
+.video{
+  width: 650px;
+
+}
+
+#video1{
+  border: 7px solid rgb(165, 78, 78);
+  border-radius: 20px 20px 0px 0px;
+  width: 470px;
+  display: flex;
+  width: 610px;
+  height: 100px;
+}
+#video2{
+  border: 7px solid rgb(165, 78, 78);
+  border-top: 0px solid rgb(165, 78, 78);
+  border-top: 0px;
+  border-radius: 0px 0px 20px 20px;
+  display: flex;
+  width: 610px;
+}
+
+.thumbnail{
+  width: 330px;
+  height: 290px;
+}
+.link{
+  border-left: 7px solid rgb(165, 78, 78);
+  width: 280px;
+  height: 290px;
+}
+
+
+
+/* ----------------------------------- */
+
+/* 2번째 줄 */
+
+
+.cookName{
+  display: flex;
+  width: 1150px;
+}
+
+.cName{
+  border: 1px solid black;
+  height: 10rem;
+  width: 210px;
+}
+
+.cNameBox{
+  border: 1px solid black;
+  height: 10rem;
+  width: 945px;
+}
+
+
+/* ----------------------------------- */
+
+
+/* 3번째 줄 */
+.material{
+  display: flex;
+  width: 1150px;
+}
+
+.mName{
+  border: 1px solid black;
+  height: 10rem;
+  width: 210px;
+}
+
+.mnameBox{
+  border: 1px solid black;
+  height: 10rem;
+  width: 945px;
+}
+
+
+/* ----------------------------------- */
+
+/* 4번째 줄 */
+.cookProcess{
+  display: flex;
+  width: 1150px;
+}
+
+.cpName{
+  border: 1px solid black;
+  height: 10rem;
+  width: 210px;
+}
+
+.cpnameBox{
+  border: 1px solid black;
+  height: 10rem;
+  width: 945px;
+}
+
+/* ----------------------------------- */
+
+/* 5섯번째 줄 */
+.tip{
+  display: flex;
+  width: 1150px;
+}
+
+.tName{
+  border: 1px solid black;
+  height: 10rem;
+  width: 210px;
+}
+
+.tnBox{
+  border: 1px solid black;
+  height: 10rem;
+  width: 945px;
+}
+
+/* ----------------------------------- */
+
+/* 6번째 줄 */
+.cookInformation{
+  display: flex;
+  width: 1150px;
+}
+
+.ciName{
+  border: 1px solid black;
+  height: 10rem;
+  width: 210px;
+}
+
+.cinBox{
+  border: 1px solid black;
+  height: 10rem;
+  width: 945px;
+}
+
+
+/* ----------------------------------- */
+
+/* 7번째 줄 */
+.tag{
+  display: flex;
+  width: 1150px;
+}
+
+.tagName{
+  border: 1px solid black;
+  height: 10rem;
+  width: 210px;
+}
+
+.tagnBox{
+  border: 1px solid black;
+  height: 10rem;
+  width: 945px;
+}
+
+/* ----------------------------------- */
+
+/* 8번째 줄 */
+.endPicture{
+  display: flex;
+  width: 1150px;
+}
+
+.epName{
+  border: 1px solid black;
+  height: 10rem;
+  width: 210px;
+}
+
+.epnBox{
+  border: 1px solid black;
+  height: 10rem;
+  width: 945px;
+}
+
+/* ----------------------------------- */
+
+/* 9번째 줄 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 네비 */

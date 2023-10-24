@@ -9,4 +9,18 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  
+  <!-- 특정 요청이 올 경우 어떤 Servlet에서 처리할지 지정 -->
+  
+  <!-- 특정 클래스를 Servlet으로 지정 -->
+  <servlet>
+  	  <servlet-name>ex1</servlet-name>
+  	  <servlet-class>edu.kh.servlet.controller.ExampleServlet1</servlet-class>
+  </servlet>
+  
+  <!-- Servlet으로 지정된 클래스가 어떤 주소의 요청을 처리할지 지정 -->
+  <servlet-mapping>
+  	  <servlet-name>ex1</servlet-name>
+  	  <url-pattern>/example1</url-pattern>
+  </servlet-mapping>
 </web-app>

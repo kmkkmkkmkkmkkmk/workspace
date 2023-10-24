@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>댓글</title>
+  <link rel="stylesheet" href="댓글.css">
+</head>
+<body>
+  <main class="container">
+
+    <label for="writer">작성자명 : <input type="text" id="writer"> </label>
+    <section class="write-container">
+      <textarea name="input-comment" id="input-comment" ></textarea>
+      <button id="write-btn">댓글 등록</button>
+    </section>
+
+    <section class="comment-container">
+
+      <div class="comment-row">
+        <div class="comment-info">
+          <p class="comment-writer">작성자명</p>
+          <p class="write-date">2023-09-25 11:14:30</p>
+        </div>
+
+        <p class="comment-content">댓글을         
+등록하고
+삭제해보세요</p>
+
+        <div class="btn-area">
+          <!-- <button class="update-btn">수정</button> -->
+          <button class="delete-btn">삭제</button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <script src="댓글.js"></script>
+</body>
+</html>

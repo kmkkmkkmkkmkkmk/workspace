@@ -1,0 +1,123 @@
+/* 변수 선언, 기본 크기 지정 */
+:root{
+  font-size: 62.5%; /* == 10px */
+  --main-color : #455ba8;
+  --hover-opacity : 0.9;
+  --active-opacity : 0.7;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 전체 감싸는 요소 */
+main.container{
+  width: 80vw;
+  min-width: 50rem;
+  margin: 3rem auto;
+}
+
+/* 작성자명 */
+label[for='writer']{
+  font-size: 2rem;
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+#writer{ margin-left: 0.5rem;}
+
+/* 댓글 작성 영역 */
+.write-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+/* 댓글 textarea */
+#input-comment{
+  height: 9.1rem;
+  resize: none;
+  padding: 1rem;
+  font-size: 2rem;
+  flex-grow: 1;
+  margin-right: 0.2rem;
+}
+
+/* 댓글 등록 버튼 */
+#write-btn{
+  width: 9.1rem;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  /* border: 0.2rem solid var(--main-color); */
+  border: none;
+  cursor: pointer;
+}
+
+#write-btn:hover{
+  opacity: var(--hover-opacity);
+}
+
+#write-btn:active{
+  opacity: var(--active-opacity);
+}
+
+/* 댓글 출력 영역 */
+.comment-container{
+  padding: 0.5rem;
+}
+
+/* 댓글 한 줄 */
+.comment-row{
+  border-top: 0.2rem solid black;
+  padding: 1rem 0;
+
+}
+
+/* 댓글 정보 */
+.comment-info{
+  display: flex;
+  justify-content: space-between;
+  font-size : 1.5rem;
+  padding-bottom: 1rem;
+
+}
+
+.comment-writer{
+  font-weight: bold;
+  margin-left: 2rem;
+}
+
+.write-date{margin-right: 2rem;}
+
+/* 댓글 내용 */
+.comment-content{
+  white-space: pre-wrap;
+  font-size : 2rem;
+  padding : 1.5rem 0.5rem ;
+  border-top : 0.1rem solid #ccc;
+}
+
+/* 버튼 영역 */
+.btn-area{
+  display : flex;
+  justify-content : flex-end;
+  border-top : 0.1rem solid #ccc;
+  padding-top: 1rem;
+}
+
+.btn-area > button {
+  border: none;
+  padding: 0.3rem;
+  margin-left: 0.5rem;
+  width: 5rem;
+  height: 3rem;
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+}
+
+.btn-area > button:hover{ opacity: var(--hover-opacity);}
+.btn-area > button:active{ opacity: var(--active-opacity);}
