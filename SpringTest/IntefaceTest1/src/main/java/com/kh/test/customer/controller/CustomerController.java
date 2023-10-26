@@ -19,7 +19,7 @@ public class CustomerController {
 	@Autowired
 	private CustomerService service;
 	
-	@PostMapping("/static/index")
+	@PostMapping("index")
 	public String signup(Customer inputCustomer, Model model) {
 		
 		int result = service.signup(inputCustomer);
