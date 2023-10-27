@@ -1,5 +1,7 @@
 package edu.kh.project.board.model.dto;
 
+import java.util.List;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -36,6 +38,14 @@ public class Board {
     private int likeCount; // 좋아요 수
     private String memberNickname; // 작성자 닉네임
     private String thumbnail; // 썸네일 이미지 경로
+    
+    private String profileImg; // 게시글 작성자 프로필 이미지
+    
+    
+    
+    // 댓글 목록을 저장할 필드
+    private List<Comment> commentList;
+    
     
     
     
