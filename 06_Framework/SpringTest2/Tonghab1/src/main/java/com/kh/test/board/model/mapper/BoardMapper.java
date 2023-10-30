@@ -7,11 +7,11 @@ import org.apache.ibatis.annotations.Mapper;
 
 import com.kh.test.board.model.dto.Board;
 
-@Mapper
+@Mapper // 매퍼 연결용 어노테이션
 
 public interface BoardMapper {
 
 	List<Board> boardCheck(String boardTitle);
-	
+	// 값을 매퍼로 전달
 	
 }

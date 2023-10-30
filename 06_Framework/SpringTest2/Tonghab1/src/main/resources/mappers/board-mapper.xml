@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-<mapper namespace="com.kh.test.board.model.mapper.BoardMapper">
+<mapper namespace="com.kh.test.board.model.mapper.BoardMapper"> 
+	<!-- 알맞은 경로의 네임 스페이스 작성 -->
 	
+	<!-- 조회한 값을 얻어와야해서 select 구문 -->
+	<!-- 타입은 board (board에서 값을 가져오기 때문) -->
 	<select id="boardCheck" resultType="board">
 		SELECT BOARD_NO, BOARD_TITLE, USER_ID, BOARD_CONTENT, BOARD_READCOUNT, BOARD_DATE
 		FROM TB_BOARD
 		JOIN TB_USER USING(USER_NO)
+		<!-- Board 테이블엔 User_Id가 없어서 USR테이블과 연결할 User_No와 조인해준다 -->
+		
 		WHERE BOARD_TITLE LIKE '%${boardTitle}%' 
+		<!-- 어디에 담아올지 위치 적어주고 LIKE를 이용해 조회할 입력 값을 담아준다 -->
 	</select>
 	
 	

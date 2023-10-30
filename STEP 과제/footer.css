@@ -1,0 +1,77 @@
+*{
+  /* box-sizing: border-box; */
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* width: 144rem;
+  height: 130rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+} 
+
+
+/* *{
+  border: 1px solid black;
+} */
+
+.allFirstBox{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+
+
+
+/* 왼쪽 */
+
+.classBox1{
+  width: 20rem;
+  padding: 0rem 1.3rem 0rem 1.3rem;
+}
+
+.leftTitle{
+  font-size: ;
+  padding: 0.5rem 0rem 1.2rem 0rem;
+}
+
+.dateBox{
+  font-size: 0.8rem;
+}
+
+
+
+
+/* 중앙 */
+
+
+.classBox2{
+  width: 25rem;
+  padding: 0rem 3rem 0rem 3rem;
+  
+  
+}
+
+
+/* 오른쪽 */
+
+.classBox3{
+  width: 17rem;
+  padding: 0rem 1.3rem 0rem 1.3rem;
+
+}
+
+
+
+
+/* 맨 아래 */
+.classLastLine{
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0rem 1.5rem 0rem;
+  /* font-weight: bold; */
+}
