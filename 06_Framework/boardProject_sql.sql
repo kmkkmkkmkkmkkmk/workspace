@@ -656,12 +656,27 @@ COMMIT;
 
 
 
+SELECT * FROM BOARD_LIKE;
+
+-- 게시글 좋아요 여부 확인 (1 좋아요 / 0 좋아요X)
+SELECT COUNT(*) FROM "BOARD_LIKE"
+WHERE BOARD_NO = 1500
+AND MEMBER_NO = 1;
 
 
+SELECT * FROM BOARD_LIKE;
+
+-- 좋아요 테이블 행 삭제(회원번호, 게시글번호 일치하는 행 삭제)
+DELETE FROM "BOARD_LIKE"
+WHERE BOARD_NO = 1500
+AND MEMBER_NO = 1;
+
+ROLLBACK;
 
 
-
-
+-- 좋아요 테이블 행 삽입
+INSERT INTO "BOARD_LIKE" (MEMBER_NO, BOARD_NO)
+VALUES(2, 1500);
 
 
 
