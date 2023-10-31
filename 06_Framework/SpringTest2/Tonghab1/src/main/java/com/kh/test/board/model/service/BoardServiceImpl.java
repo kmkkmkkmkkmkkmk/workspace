@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service // 서비스와 연결 어노테이션
 @Transactional(rollbackFor = Exception.class) // 오류 방지 
-@RequiredArgsConstructor // @Autowired를 안쓰기위한 어노테이션
+@RequiredArgsConstructor // @Autowired를 안 쓰기위한 어노테이션
 public class BoardServiceImpl implements BoardService {
 	private final BoardMapper mapper; // 매퍼와 연결용 구문
 	
