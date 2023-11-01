@@ -40,8 +40,3 @@ public class BoardController {
 			return "searchFail";
 		}
 	}
-	
-	
-	
-	
-
