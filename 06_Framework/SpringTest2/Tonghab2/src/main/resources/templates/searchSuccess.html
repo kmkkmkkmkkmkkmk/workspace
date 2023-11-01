@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조회 성공</title>
+</head>
+<body>
+    <h1>게시글 검색 결과</h1>
+
+    <table border="1">
+        <tr>
+            <th>번호</th><th>제목</th><th>작성자</th><th>내용</th><th>조회수</th><th>작성날짜</th>
+        </tr>
+        <!-- 
+            아래 행 부분이 반복되야하는데 
+            다른 부분을 반복시켜서 오류 남
+
+            향상 for문을 2번째 행부터 돌도록 수정해줌
+            
+        -->
+        <tr th:each="board : ${boardList}" th:object="${board}">
+            <td th:text="*{boardNo}"></td>
+            <td th:text="*{boardTitle}"></td>
+            <td th:text="*{userId}"></td>
+            <td th:text="*{boardContent}"></td>
+            <td th:text="*{boardReadCount}"></td>
+            <td th:text="*{boardDate}"></td>
+        </tr>
+
+    </table>
+
+    
+</body>
+</html>

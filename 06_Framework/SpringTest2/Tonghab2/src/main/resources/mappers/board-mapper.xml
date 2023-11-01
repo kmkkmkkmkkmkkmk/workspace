@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.kh.test.board.model.mapper.BoardMapper">
+	
+	
+	<select id="memberTitle" resultType="board">
+		SELECT BOARD_NO, BOARD_TITLE, USER_ID, BOARD_CONTENT, BOARD_READCOUNT, BOARD_DATE 
+		FROM "TB_BOARD"
+		JOIN "TB_USER" USING (USER_NO)
+		WHERE USER_ID LIKE '%${memberSearch}%'
+	</select>
+</mapper>
+	<!-- WHERE USER_ID LIKE '%${memberSearch}%'  << memberSearch 받아오는  입력 값 부분을 써야하는 걸 제대로 안써줌 -->

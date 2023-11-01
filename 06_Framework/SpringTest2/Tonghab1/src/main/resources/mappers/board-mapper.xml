@@ -15,7 +15,4 @@
 		WHERE BOARD_TITLE LIKE '%${boardTitle}%' 
 		<!-- 어디에 담아올지 위치 적어주고 LIKE를 이용해 조회할 입력 값을 담아준다 -->
 	</select>
-	
-	
-	
 </mapper>
