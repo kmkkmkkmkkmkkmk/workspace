@@ -30,6 +30,8 @@
 	     후 : AFTER
 	   
 	     keyProperty 속성 : selectKey 조회 결과를 저장할 파라미터의 필드
+	     
+	     깊은 복사 : 전체 다 복사 / 얕은 복사 : 주소만 복사
 	 -->
 	 
 	<insert id="insertBoard" parameterType="Board" useGeneratedKeys="true">
@@ -73,17 +75,49 @@
 			FROM DUAL
 		</foreach>
 		
-		
-		
 	</insert>
 	
 	
 	
+	<!-- 게시글 부분만 수정 -->
+	<update id="updateBoard">
+		UPDATE "BOARD" SET
+		BOARD_TITLE = #{boardTitle},
+		BOARD_CONTENT = #{boardContent},
+		BOARD_UPDATE_DATE = SYSDATE
+		WHERE BOARD_CODE = #{boardCode}
+		AND BOARD_NO = #{boardNo}
+	</update>
 	
 	
+	<!-- 이미지 삭제 -->
+	<delete id="imageDelete">
+		DELETE FROM BOARD_IMG 
+		WHERE BOARD_NO = #{boardNo}
+		AND IMG_ORDER IN ( ${deleteOrder} )
+			<!--( # == '1,2,3' // $ == 1,2,3 )-->
+		
+	</delete>
+
+
+	<!-- 이미지 하나 수정 -->	
+	<update id="updateBoardImg">
+		UPDATE "BOARD_IMG" SET
+		IMG_PATH = #{imgPath},
+		IMG_RENAME = #{imgRename},
+		IMG_ORIGINAL_NAME = #{imgOriginalName}
+		WHERE BOARD_NO = #{boardNo}
+		AND IMG_ORDER = #{imgOrder}
+	</update>	
 	
 	
-	
+	<!-- 이미지 하나 삽입 -->
+	<insert id="boardImgInsert">
+		INSERT INTO "BOARD_IMG"
+	  	VALUES(SEQ_IMG_NO.NEXTVAL, #{imgPath}, #{imgRename},
+	    #{imgOriginalName}, #{imgOrder}, #{boardNo}
+        )
+	</insert>
 	
 	
 	
