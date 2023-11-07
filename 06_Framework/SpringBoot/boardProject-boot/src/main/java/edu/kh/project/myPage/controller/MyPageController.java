@@ -52,6 +52,9 @@ public class MyPageController {
 		return "myPage/myPage-secession";
 	}
 	
+
+
+	
 	// --------------------------------------------------
 	
 	/** 회원 정보 수정
