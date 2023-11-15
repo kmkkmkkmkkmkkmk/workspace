@@ -83,7 +83,7 @@ memberEmail.addEventListener("input", () => {
                 emailMessage.classList.remove("error"); // 빨간 글씨 제거
                 checkObj.memberEmail = true; // 유효한 상태임을 기록
             } else { // 중복 O
-                emailMessage.innerText = "이미 사용 중인 이메일 입니다.";
+                emailMessage.innerText = "이미 사용 중인 이 메일 입니다.";
                 emailMessage.classList.add("error"); // 빨간 글씨
                 emailMessage.classList.remove("confirm"); // 초록색 글씨 제거
                 checkObj.memberEmail = false; // 유효한 상태임을 기록
