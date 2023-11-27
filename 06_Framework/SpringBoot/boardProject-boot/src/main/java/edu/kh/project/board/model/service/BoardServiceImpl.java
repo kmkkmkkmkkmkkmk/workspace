@@ -154,8 +154,11 @@ public class BoardServiceImpl implements BoardService{
 	
 	
 	
-	
-	
+	// 게시판 종류 조회
+	@Override
+	public List<Map<String, Object>> selectBoardTypeList() {
+		return mapper.selectBoardTypeList();
+	}
 	
 	
 	

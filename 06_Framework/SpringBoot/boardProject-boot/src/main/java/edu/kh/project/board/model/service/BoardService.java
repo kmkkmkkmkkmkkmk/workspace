@@ -52,5 +52,10 @@ public interface BoardService {
 	 */
 	List<String> selectDbImageList();
 
+	/** 게시판 종류 조회
+	 * @return list
+	 */
+	List<Map<String, Object>> selectBoardTypeList();
+
 
 }
