@@ -78,7 +78,7 @@ memberEmail.addEventListener("input", () => {
         .then( response => response.text() )   // 첫번째 then은 응답이 왔을 때 수행, 응답 결과를 text로 파싱
         .then( result => {                     // 두번째 then은 첫번째 then의 반환된 결과를 이용해 기능 수행
             if(result == 0) { // 중복 X
-                emailMessage.innerText = "서용 가능한 이메일 입니다.";
+                emailMessage.innerText = "사용 가능한 이메일 입니다.";
                 emailMessage.classList.add("confirm"); // 초록색 글씨
                 emailMessage.classList.remove("error"); // 빨간 글씨 제거
                 checkObj.memberEmail = true; // 유효한 상태임을 기록
