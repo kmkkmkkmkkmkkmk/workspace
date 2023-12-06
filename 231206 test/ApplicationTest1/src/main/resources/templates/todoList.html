@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <!-- 제출 형식이 아닌데 폼 태그를 작성함 ㅠㅠ -->
+
+    
+    <h1>나의 To do List</h1>
+    <!-- To Do List가 존재하지 않을 때 "일정이 존재하지 않습니다" 출력 -->
+    
+    <h6 th:if="${#lists.size(todoList) == 0}">게시글이 존재하지 않습니다.</h6>
+    <!-- 받아올 값이 3줄인데 3줄에 여러 개의 값을 담아오려면 list로 받아야하고 list 갯수만큼 받아와야함 -->
+
+    
+    <!-- To Do List가 존재할 때 조회된 모든 일정 출력 -->
+    
+    <ul th:unless="${#lists.size(todoList) == 0}" th:each="todo : ${todoList}" th:object="${todo}">
+        <!-- if문의 반대 unless를 사용하고 for문을 돌려서 리스트를 쭉쭉 가져온다 object는 반복 구문을 줄이기 위해 사용 -->
+
+        
+        <li th:text="|*{todoNo} : *{todoTitle} (*{todoContent})|"></li>
+        <!-- | 이 사이에 값을 넣어주면 여러 개의 값을 넣을 수 있다 |  >>> || -->
+
+    </ul>
+</body>
+</html>

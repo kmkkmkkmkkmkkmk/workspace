@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kh.test.todo.model.mapper.TodoMapper">
+	
+	<select id="todoList" resultType="Todo">
+		SELECT TODO_NO, TODO_TITLE, TODO_CONTENT
+		FROM TB_TODO
+	</select>
+	
+</mapper>
