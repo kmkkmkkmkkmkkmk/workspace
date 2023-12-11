@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <h1>나의 To do List</h1>
+    <!-- To Do List가 존재하지 않을 때 "일정이 존재하지 않습니다" 출력 -->
+    <th:block  th:each="todo : ${todoList}" th:object="${todo}">
+        <ul th:if="${#lists.size(todoList) == 0}">
+            게시글이 존재하지 않습니다.
+        </ul>
+        
+        
+        
+        <!-- To Do List가 존재할 때 조회된 모든 일정 출력 -->
+        <ul th:if="${#lists.size(todoList) != 0}">
+            <li th:text="|*{todoNo} : *{todoTitle} (*{todoContent})|"></li>
+        </ul>
+    </th:block>
+
+</th:block>
+</body>
+</html>

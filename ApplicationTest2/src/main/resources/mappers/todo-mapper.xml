@@ -3,8 +3,8 @@
 <mapper namespace="com.kh.test.todo.model.mapper.TodoMapper">
 	
 	<select id="todoList" resultType="Todo">
-		SELECT TODO_NO, TODO_TITLE, TODO_CONTENT
-		FROM TB_TODO
+		SELECT * FROM TB_TODO
 	</select>
+	
 	
 </mapper>

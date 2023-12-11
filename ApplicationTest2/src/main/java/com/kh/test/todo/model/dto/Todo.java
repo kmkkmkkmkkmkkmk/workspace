@@ -7,12 +7,12 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+
 public class Todo {
 	
-	public int todoNo;
-	public String todoTitle;
-	public String todoContent;
-	
+	private int todoNo;
+	private String todoTitle;
+	private String todoContent;
 	
 	
 }

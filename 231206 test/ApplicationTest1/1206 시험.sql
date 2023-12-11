@@ -1,1 +1,0 @@
-SELECT * FROM TB_TODO;

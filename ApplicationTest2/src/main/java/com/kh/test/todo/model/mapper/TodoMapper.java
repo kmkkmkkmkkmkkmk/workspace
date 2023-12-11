@@ -12,5 +12,4 @@ public interface TodoMapper {
 	List<Todo> todoList();
 
 
-
 }

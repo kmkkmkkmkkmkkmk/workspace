@@ -7,6 +7,5 @@ import com.kh.test.todo.model.dto.Todo;
 public interface TodoService {
 
 	List<Todo> todoList();
-
-
+	
 }

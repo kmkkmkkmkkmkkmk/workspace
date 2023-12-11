@@ -19,17 +19,14 @@ public class TodoController {
 
 	private final TodoService service;
 	
-	
-	@GetMapping("/") // 경로 리턴이랑 반대로 씀
+	@GetMapping("/")
 	public String todoList(Model model) {
 		
-		List<Todo> todoList = service.todoList(); // 여러 줄과 여러 항목이라 리스트를 받아야함 List 타입으로!
+		List<Todo> todoList = service.todoList();
 		
 		model.addAttribute("todoList", todoList);
-		
+
 		return "todoList";
 	}
-	
-	
 	
 }

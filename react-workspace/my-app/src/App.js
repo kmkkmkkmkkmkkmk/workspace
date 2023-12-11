@@ -10,6 +10,8 @@ import Props3 from './components/R05_Props3';
 
 
 import State1 from './components/R06_State1';
+import State2 from './components/R07_State2';
+import State3 from './components/R08_State3';
 
 /*  JSX  <= JS XML */
 
@@ -29,12 +31,12 @@ function App() {  /* 감싸는 게 부모 */
       {/* jsx 주석 */}
       {/* <ClassComponent/> */}
       
-      <hr/>
+      {/* <hr/> */}
 
       {/* <FunctionComponent/> */}
       {/* <FunctionComponent/> */}
 
-      <hr/>
+      {/* <hr/> */}
 {/* 
       <Props1/>
       <Props1 name='홍길동' num='1'/>
@@ -49,7 +51,14 @@ function App() {  /* 감싸는 게 부모 */
       <Props3 name='김민규'/>
       <Props3 name='윤성국'/>
  */}
-    <State1/>
+      {/* <State1/> */}
+
+      {/* <hr/> */}
+      {/* <State2 init={472}/>
+      <State2 init={3}/> */}
+      
+      {/* <hr/> */}
+      {/* <State3/> */}
     </>
   );
   
