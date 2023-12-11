@@ -13,6 +13,8 @@ import State1 from './components/R06_State1';
 import State2 from './components/R07_State2';
 import State3 from './components/R08_State3';
 
+import TodoList from './components/R09_TodoList';
+
 /*  JSX  <= JS XML */
 
 /* ======================================================== */
@@ -59,6 +61,11 @@ function App() {  /* 감싸는 게 부모 */
       
       {/* <hr/> */}
       {/* <State3/> */}
+
+      <TodoList/>
+
+
+
     </>
   );
   
