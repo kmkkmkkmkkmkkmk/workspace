@@ -6,3 +6,7 @@
 
 /* todoList 체크 된 것 완료 줄 긋기 */
 .completed{ text-decoration: line-through;}
+
+
+.color-red { color: red; }
+
