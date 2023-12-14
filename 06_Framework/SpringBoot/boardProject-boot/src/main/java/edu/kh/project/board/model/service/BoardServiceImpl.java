@@ -106,6 +106,12 @@ public class BoardServiceImpl implements BoardService{
 		return mapper.boardDetail(map);
 	}
 	
+	
+	
+	
+	
+	
+	
 	// 게시글 좋아요 여부 확인
 	@Override
 	public int likeCheck(Map<String, Object> map) {
