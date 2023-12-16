@@ -2,21 +2,24 @@ package com.test.boot.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 @Controller
 @RequiredArgsConstructor
-@Slf4j
-public class MainController {
-
-
-	@GetMapping("/")
-	public String mainPage() {
-		return "mainPage";
-	}
+public class OrderController {
 	
+
+	@PostMapping("/mainPage")
+	public String todal(Model model) {
+		
+		int todal = 0;
+		
+		if(todal > 0) {
+			return "resultPage";
+		}
+		return "errorPage";
+	}
 }

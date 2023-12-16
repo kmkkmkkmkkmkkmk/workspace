@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 th:text="${name}">홍길동</h1><h1>님의 구매목록</h1>
+  <div th:text="|${blackPen} ${inputValue}개 : ${blackPrice}|"></div>
+  <div th:text="|${renPen} ${inputValue}개 : ${redPrice}|"></div>
+  <div th:text="|${bluePen} ${inputValue}개 : ${bluePrice}|"></div>
+  <div th:text="|${white} ${inputValue}개 : ${whitePrice}|"></div>
+<hr>
+  <div th:text="|총합 ${blackPrice}+${redPrice}+${bluePrice}+${whitePrice}을 결제하셨습니다.|"></div>
+</body>
+</html>

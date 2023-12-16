@@ -6,8 +6,51 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>프로젝트 생성 성공</h1>
 
+  <table border="1px soild black">
+    
+    <form action="">
 
+      <tr>
+        <th colspan="3">주문자명</th>
+      </tr>
+      <tr colspan="3">
+        <td colspan="3" style="height: 20px;"><input type="text" name="name"></td>
+      </tr>
+      <tr>
+        <th>품목</th>
+        <th>가격</th>
+        <th size="10px">수량</th>
+      </tr>
+      <tr>
+        <td>검정 펜</td>
+        <td>500원</td>
+        <td style="width: 15px;"><input type="number"  min="0" max="100" value="0" name="blackPen"></td>
+      </tr>
+      <tr>
+        <td>빨간 펜</td>
+        <td>700원</td>
+        <td style="width: 15px;"><input type="number"  min="0" max="100" value="0" name="redPen"></td>
+      </tr>
+      <tr>
+        <td>파란 펜</td>
+        <td>700원</td>
+        <td style="width: 15px;"><input type="number"  min="0" max="100" value="0" name="bluePen"></td>
+      </tr>
+      <tr>
+        <td>화이트</td>
+        <td>1000원</td>
+        <td style="width: 15px;"><input type="number"  min="0" max="100" value="0" name="white"></td>
+      </tr>
+      <tr colspan="3">
+        <td colspan="3">
+          <button>구매</button>
+          <button type="button" onclick="reset()">초기화</button>
+        </td>
+      </tr>
+    </form>
+
+  </table>
+  
 </body>
 </html>
