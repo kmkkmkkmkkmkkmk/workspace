@@ -127,7 +127,7 @@ function chattingEnter(e){
 
 
 
-// 비동기로 채팅방 목록 조회
+// 비동기로 채팅방 목록 조회 =========================================================================================== 288번 줄 같이 보기
 function selectRoomList(){
 
 	fetch("/chatting/roomList")
@@ -285,7 +285,7 @@ function roomListAddEvent(){
 
 
 
-// 비동기로 메세지 목록을 조회하는 함수
+// 비동기로 메세지 목록을 조회하는 함수 =========================================================================================== 130번 같이 보기
 function selectChattingFn() {
 
 	fetch("/chatting/selectMessage?"+`chattingNo=${selectChattingNo}&memberNo=${loginMemberNo}`)
