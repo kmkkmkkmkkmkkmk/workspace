@@ -27,7 +27,7 @@ public class ChattigContreller {
     @Autowired
     private ChattingService service;
     
-    // 채팅 페이지
+    // 채팅 페이지 전환
     @GetMapping("/chatting")
     public String chatting(@SessionAttribute("loginMember") Member loginMember, Model model) {
         
@@ -35,6 +35,19 @@ public class ChattigContreller {
         model.addAttribute("roomList", roomList);
         return "chatting/chatting";
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     // 채팅 상대 검색
     @GetMapping(value="/chatting/selectTarget", produces="application/json; charset=UTF-8")
